@@ -34,5 +34,5 @@ The user will be able to enter in any ingredients available to them and our prod
 
 
 ### Additional Links: 
-[Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
-[Contribute](https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude/blob/master/CONTRIBUTING.md)
+- [Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
+- [Contribute](https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude/blob/master/CONTRIBUTING.md)
