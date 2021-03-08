@@ -15,20 +15,20 @@ Click [here](https://invis.io/MY10DOVS2HXZ) for the link to our prototype.
 #### BottomsUp Wireframe
 
 <p align="center">
-     <img src="ux-design/BottomsUp Wireframe-Page-1.png">
+     <img src="images/BottomsUp Wireframe-Page-1.png">
      <br>Entire wireframe displaying all possible user screens
 </p>
 
 #### BottomsUp App Map
 <p align="center">
-     <img src="ux-design/BottomsUpMap.png">
+     <img src="images/BottomsUpMap.png">
      <br>Entire app map displaying all possible user screens
 </p>
 
 #### Search Page
 
 <p align="center">
-  <img src="ux-design/search_page.png">
+  <img src="images/search_page.png">
   <br>Search page user sees when entering ingredients
 </p>
      
@@ -36,25 +36,31 @@ Click [here](https://invis.io/MY10DOVS2HXZ) for the link to our prototype.
 #### Cocktail List
 
 <p align="center">
-  <img src="ux-design/cocktail_list.png">
+  <img src="images/cocktail_list.png">
   <br>List of possible cocktais based on available ingredients user has entered
-
 </p>
      
 
 #### Drink Page
 
 <p align="center">
-  <img src="ux-design/drink_page.png">
+  <img src="images/drink_page.png">
   <br>Recipe for specific drink user has selected
+</p>     
+
+
+#### Search by Name Page
+
+<p align="center">
+  <img src="images/search_by_name.png">
+  <br>Optional page to search for cocktails by their name
 </p>
-     
 
 
 #### Sign-In Page
 
 <p align="center">
-  <img src="ux-design/sign_in_page.png">
+  <img src="images/sign_in_page.png">
   <br>Optional sign-in page to save recipes and ingredients entered
 </p>
      
