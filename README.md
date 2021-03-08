@@ -35,6 +35,6 @@ For those interested in contributing to this project, a link to our contribution
 ## Building and Testing
 TBA
 
-### Additional Links: 
+## Additional Links: 
 - [Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
 - [Contribute](https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude/blob/master/CONTRIBUTING.md)
