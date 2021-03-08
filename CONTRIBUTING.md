@@ -1,5 +1,12 @@
 # Contributing
 ## Team Values and Norms
+#### Values:
+* We strongly value communication between members and transparency to better meet our goals
+* Punctuality is very important so that we can maintain our schedule and make deadlines
+* Asking for assistance when stuck is strongly encouraged, as a team we must help out a member whenever something comes up
+#### Norms:
+* Zoom meeting times: Sundays @ 3:00pm
+* Standups: Monday and Thursdays @ 5:00pm
 
 ## Git Workflow
 * Pull from master branch to check for any recent changes made
