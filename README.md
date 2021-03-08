@@ -31,7 +31,7 @@ The user will be able to enter in any ingredients available to them and our prod
 This project came together while brainstorming useful products for busy adults such as ourselves. The first iteration of this idea stemmed from a problem we noticed in which a lot of ingredients we have at home tend to go to waste if they dont align to a specific recipe we know. It's almost impossible to know every combination possible with a bunch of random ingredients so having an app which could do exaclty that would be immensely useful. In order to make this idea more realistic, we decided to narrow our focus on providing a ingredient and recipe database based on cocktails. This would allow a user to still make the most use of what they have on hand while also enjoying a drink they might not have known how to make otherwise.
 
 ## Building and Testing
-
+TBA
 
 ### Additional Links: 
 - [Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
