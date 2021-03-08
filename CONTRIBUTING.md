@@ -15,8 +15,8 @@
 * Ask for help on a task, if needed, early to avoid hangups in development
 
 ## Setting Up Local Environment
-Clone repository through your command line using:
-`git clone https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude.git`
+Clone repository through your command line using:<br>
+`git clone https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude.git`<br>
 Then open repository into your IDE of choice to begin contributions.
 
 ## Building and Testing
