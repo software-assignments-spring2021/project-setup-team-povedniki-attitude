@@ -26,3 +26,13 @@ The user will be able to enter in any ingredients available to them and our prod
 - [Maneesh Karnati](https://github.com/mannyk017)
 - [Dhruv Shetty](https://github.com/dshetty1)
 - [Diego Mendoza](https://github.com/diegomendoza99)
+
+## History
+
+
+## Building and Testing
+
+
+### Additional Links: 
+[Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
+[Contribute](https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude/blob/master/CONTRIBUTING.md)
