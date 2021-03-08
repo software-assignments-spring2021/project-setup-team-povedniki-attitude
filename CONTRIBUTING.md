@@ -1,11 +1,10 @@
 # Contributing
-## Team Values 
-### Norms
+## Team Values and Norms
 
-### Git Workflow
+## Git Workflow
 
-### How and What to Contribute
+## How and What to Contribute
 
-### Setting Up Local Environment
+## Setting Up Local Environment
 
-### Building and Testing
+## Building and Testing
