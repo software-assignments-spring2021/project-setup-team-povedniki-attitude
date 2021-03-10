@@ -6,7 +6,7 @@
 * Asking for assistance when stuck is strongly encouraged, as a team we must help out a member whenever something comes up
 #### Norms:
 * Zoom meeting times: Sundays @ 3:00pm
-* Standups: Monday and Thursdays @ 5:00pm
+* Standups: Monday @ 4:45pm
 
 ## Git Workflow
 * Pull from master branch to check for any recent changes made
