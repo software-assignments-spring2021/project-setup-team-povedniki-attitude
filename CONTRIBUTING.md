@@ -5,7 +5,9 @@
 * Punctuality is very important so that we can maintain our schedule and make deadlines
 * Asking for assistance when stuck is strongly encouraged, as a team we must help out a member whenever something comes up
 #### Norms:
-* Zoom meeting times: Sundays @ 3:00pm
+* Zoom meeting times:
+  * Sundays @ 7:00pm
+  * Wednesdays @ 3:15 pm
 * Standups: Monday @ 4:45pm
 
 ## Git Workflow
