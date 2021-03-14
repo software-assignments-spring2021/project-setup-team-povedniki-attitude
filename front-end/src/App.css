@@ -15,13 +15,15 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.App-header h1 {
+  margin: .2em 0;
 }
 
 .App-link {
@@ -35,4 +37,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  margin-top: 3em;
+}
+
+#ingredient {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  width: 40vw;
+  margin: 0 1em;
+}
+
+#ingContainer {
+  width: 80%;
+  height: 18em;
+  background-color: white;
+  margin: 3em auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#recipeSearch {
+  border: 2px solid white;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
 }
