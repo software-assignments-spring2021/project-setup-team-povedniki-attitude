@@ -16,7 +16,7 @@ The user will be able to enter in any ingredients available to them and our prod
 #### Themes:
 - Account management
 - Record keeping
-- Eduction
+- Education
 - Frugalness
 
 ## The Team
