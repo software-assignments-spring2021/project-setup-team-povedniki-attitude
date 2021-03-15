@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
+
+// components
+import App from './App';
+
+var hist = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={hist}>
+      <Switch>
+        <Route path="/" component={App} />
+        {/* <Route path="/search" component={SearchPage} />
+        <Route path="/discover" component={DiscoverPage} /> */}
+      </Switch>
+    </Router>,
   </React.StrictMode>,
   document.getElementById('root')
 );
