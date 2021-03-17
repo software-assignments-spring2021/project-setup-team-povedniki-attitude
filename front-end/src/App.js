@@ -1,8 +1,8 @@
 import './App.css';
-import { createBrowserHistory } from "history";
+//import { createBrowserHistory } from "history";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React from 'react';
-import {browserHistory} from 'react-router'
+//import {browserHistory} from 'react-router'
 
 import Home from './Components/Home/home'
 
@@ -19,7 +19,7 @@ function App() {
         {/* <Route path="/search" component={SearchPage} />
         <Route path="/discover" component={DiscoverPage} /> */}
       </Switch>
-    </BrowserRouter>,
+    </BrowserRouter>
     </div>
   );
 }
