@@ -27,21 +27,23 @@ function Home(){
 
   return(
     <>
-      <header className="App-header">
-      <h1>BottomsUp</h1>
-      </header>
-      <main>
-        <form>
-          <input type='text' id="ingredientInput" name='ingredient' placeholder='Search Ingredients'/>
-          <input type='submit' onClick={onSubmit} name='ingSubmit' value='Submit'/>
-        </form>  
-        <div id="ingContainer">
-        </div>
-        <a href='/search' id='recipeSearch'>Search for Recipes</a>
-      </main>
-      <footer>
-        <p>Copyright © 2021 BottomsUp</p>
-      </footer>
+      <div id='pageContainer'>
+        <header className="App-header">
+        <h1>BottomsUp</h1>
+        </header>
+        <main>
+          <form>
+            <input type='text' id="ingredientInput" name='ingredient' placeholder='Add an Ingredient'/>
+            <input type='submit' onClick={onSubmit} name='ingSubmit' value='Submit'/>
+          </form>  
+          <div id="ingContainer">
+          </div>
+          <a href='/search' id='recipeSearch'>Search for Recipes</a>
+        </main>
+        <footer>
+          <p>Copyright © 2021 BottomsUp</p>
+        </footer>
+      </div>
     </>
   )
 }
