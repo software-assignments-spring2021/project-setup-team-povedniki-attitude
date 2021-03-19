@@ -33,7 +33,8 @@ function Cocktail_Search_Page(){
             cocktailItems.map((item, index)=> {
              return(
                <>
-               <Cocktail_Item key ={index} name={item.name}
+               <Cocktail_Item key ={index} 
+               name={item.name}
                image={item.image}
                alcoholType={item.alcoholType}/>
                </>

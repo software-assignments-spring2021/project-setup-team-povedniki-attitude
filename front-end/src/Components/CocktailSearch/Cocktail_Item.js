@@ -3,9 +3,10 @@ import React from 'react';
 function Cocktail_Item({name,image,alcoholType}){
     return(
         <div className="Cocktail_Item">
-           name:{name}
+           <div>{name}</div>
+           
            <img src ={image}/>
-           alcoholType:{alcoholType}
+           <div>alcoholType:{alcoholType}</div>
 
         </div>
     )
