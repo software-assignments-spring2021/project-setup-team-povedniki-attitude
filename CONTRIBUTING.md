@@ -10,7 +10,7 @@
   * Wednesdays @ 3:15 pm
   * Sundays @ 7:00 pm
   
-https://nyu.zoom.us/j/2941311216
+https://nyu.zoom.us/j/9669972254
 
 ## Git Workflow
 * Pull from master branch to check for any recent changes made
