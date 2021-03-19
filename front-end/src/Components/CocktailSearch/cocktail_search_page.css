@@ -1,0 +1,16 @@
+
+.Cocktail_Item{
+    border-style: solid;
+    width: 400px;
+    height: 50px;
+    
+    margin: 5px;
+}
+#SearchContainer{
+    margin: auto;
+    width: 50%;
+
+}
+main{
+    width: 100%;
+}

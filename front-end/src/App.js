@@ -6,7 +6,7 @@ import {browserHistory} from 'react-router'
 
 import Home from './Components/Home/home'
 
-//import cocktail_search_page from './cocktail_search_page'
+import Cocktail_Search_Page from './Components/CocktailSearch/Cocktail_Search_Page'
 //var hist = createBrowserHistory();
 //history={hist}
 
@@ -15,7 +15,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route path="/searchpage" component={Cocktail_Search_Page} />
         {/* <Route path="/search" component={SearchPage} />
         <Route path="/discover" component={DiscoverPage} /> */}
       </Switch>
