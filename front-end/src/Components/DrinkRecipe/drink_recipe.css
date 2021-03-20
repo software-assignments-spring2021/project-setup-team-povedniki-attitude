@@ -1,0 +1,40 @@
+h2{
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+#Drink-Name{
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+img{
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    
+}
+#Drink-Rec{
+    margin:auto;
+    width: 25%;
+    height: 300px;
+    background-color: white;
+}
+
+#Recipe{
+    background-color: white;
+    width: 20%;
+    height: 18em;
+}
+
+
+.Button-Group button{
+    margin-top: 50px;
+    align: center;
+    padding: 10px 30px;   
+    cursor: pointer;
+    
+}
+
+
