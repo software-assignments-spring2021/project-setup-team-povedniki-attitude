@@ -3,17 +3,47 @@
     /* border-style: solid; */
     border-radius: 25px;
     width: 800px;
-    height: 70px;
     margin: 10px;
     background-color: white;
     
+    
+}
+.Cocktail_Item:hover{
+    /* background-color: gray; */
+    box-shadow: 5px 5px gray;
+    
+}
+.name{
+    padding: 10px;
+}
+.content{
+    display: flex;
+    padding: 10px;
+    /* justify-content: space-around; */
+    font-style: italic;
+    
+}
+
+.content img{
+    max-width: 175px;
+    max-height: 175cpx;
+    /* position: relative;
+    right: 70px; */
+    
+}
+.content .description{
+    padding-left: 20px;
 }
 
 #SearchContainer{
     
     margin: auto;
     width: 50%;
+    
 
+}
+#SearchContainer a{
+    text-decoration: none;
 }
 main{
     width: 100%;

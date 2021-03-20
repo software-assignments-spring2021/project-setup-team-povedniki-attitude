@@ -1,21 +1,34 @@
 import './cocktail_search_page.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Cocktail_Item from './Cocktail_Item'
+import {Link} from 'react-router-dom'
+
+//import axios from "axios";
+
+
 
 function Cocktail_Search_Page(){
+  // const [cocktails, setCocktails] = useState([])
+  //   useEffect(() => {
+  //       fetch("csvjson.json")
+  //           .then(response => response.text())
+  //           // .then((data) => setCocktails(data));
+  //           .then((data) => console.log(data));
+  //       })
+
   let cocktailItems=[{
     name: "Martini",
-    image:"",
-    alcoholType: "Vodka"
+    image:"https://www.liquor.com/thmb/hY8vXSQUQNgWxLN1c-3BntZo5fM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__03__07152853__moscow-mule-720x720-recipe-61ce552013b04880901b2abfb63017fd.jpg",
+    description: "vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec"
   },{
   name: "Gin and Tonic",
-    image:"",
-    alcoholType: "Gin"
+    image:"https://www.liquor.com/thmb/hY8vXSQUQNgWxLN1c-3BntZo5fM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__03__07152853__moscow-mule-720x720-recipe-61ce552013b04880901b2abfb63017fd.jpg",
+    description: "suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed"
   },{
     name: "Vodka Soda",
-      image:"",
-      alcoholType: "Vodka"
+      image:"https://www.liquor.com/thmb/hY8vXSQUQNgWxLN1c-3BntZo5fM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__03__07152853__moscow-mule-720x720-recipe-61ce552013b04880901b2abfb63017fd.jpg",
+      description: "mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus"
     },
 ]
       return(
@@ -34,9 +47,10 @@ function Cocktail_Search_Page(){
              return(
                <>
                <Cocktail_Item key ={index} 
+               //this is hardcoded for now
                name={item.name}
-               image={item.image}
-               alcoholType={item.alcoholType}/>
+               image= {item.image}
+               description={item.description}/>
                </>
              ) 
             })
