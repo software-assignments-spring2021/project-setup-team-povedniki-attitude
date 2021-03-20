@@ -1,4 +1,4 @@
-import './Cocktail_Search_Page.css';
+import './cocktail_search_page.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Cocktail_Item from './Cocktail_Item'
