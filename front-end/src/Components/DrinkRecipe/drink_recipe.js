@@ -27,17 +27,24 @@ function Drink_Recipe(props){
     }
 
     return(
-        <div>
+        <>
             <header className="App-header">
             <h1>BottomsUp</h1>
             </header>
+
         <main>
-            <h2 id = "Drink-Name">{drinkInfo.name}</h2>
-            <div id = "Drink-Image">
-                <img src={drinkInfo.image}/>
+
+            <div>
+                <p id = "Drink-Image">Drink Image</p>
+                {/*<img src={drinkInfo.image}/>*/}
+                <h2 id = "Drink-Name">{drinkInfo.name}</h2>
+                
             </div>
-            <div id = "Drink-Rec">
+
+            <div>
+                <p id = "Drink-Rec">Drink Recipe</p>
             </div>
+            
             <div class = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
                 <button onClick={saveRec}>Save Recipe</button>
@@ -46,7 +53,7 @@ function Drink_Recipe(props){
             
         </main>
 
-        </div>
+        </>
         )
     
 }
