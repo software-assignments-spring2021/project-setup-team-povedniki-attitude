@@ -16,16 +16,20 @@ function AccountDetails(){
                 justifyContent: "center",
                 alignItems: "center",
             }}>
-        <p><u>Account Details</u></p>
+            <p><u>Account Details</u></p>
         </div>
         <div>
-        <p id="ProfilePic">Profile Picture</p>
-        <p id="AccountName">Account Username</p>
+            <p id="ProfilePic">Profile Picture</p>
+            {/* <img src="./front-end/src/logo.svg" ></img> */}
+            <p id="AccountName">Account Username</p>
         </div>
         <div>
-        <p id="AccountProperties">Member Since:</p>
-        <p id="AccountProperties">Favorites:</p>
-        <p id="AccountProperties">History:</p>
+            <p id="AccountProperties">Email:</p>
+            <p id="AccountProperties">Age:</p>
+            <p id="AccountProperties">Member Since:</p>
+            <p id="AccountProperties">Favorite Drinks:</p>
+            <p id="AccountProperties">Favorite Ingredients:</p>
+            <p id="AccountProperties">History:</p>
         </div>
 
 
