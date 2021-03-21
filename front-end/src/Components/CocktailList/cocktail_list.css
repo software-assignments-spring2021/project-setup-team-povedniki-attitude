@@ -1,0 +1,56 @@
+.Cocktail_Item{
+    /* border-style: solid; */
+    border-radius: 25px;
+    width: 800px;
+    margin: 10px;
+    background-color: white;
+    
+    
+}
+.Cocktail_Item:hover{
+    /* background-color: gray; */
+    box-shadow: 5px 5px gray;
+    
+}
+.name{
+    padding-top: 10px;
+}
+
+.matchScore{
+
+}
+
+.content{
+    display: flex;
+    padding: 10px;
+    /* justify-content: space-around; */
+    font-style: italic;
+    
+}
+
+.content img{
+    max-width: 175px;
+    max-height: 175cpx;    
+    border-radius: 25px;
+}
+.content .description{
+    padding-left: 20px;
+}
+
+.content .ingredients{
+    padding-top: 10px;
+}
+
+#SearchContainer{
+    
+    margin: auto;
+    width: 50%;
+    
+
+}
+#SearchContainer a{
+    text-decoration: none;
+}
+main{
+    width: 100%;
+}
