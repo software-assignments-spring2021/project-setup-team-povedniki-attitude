@@ -39,11 +39,11 @@ function Drink_Recipe(props){
                 <h2 id = "Drink-Name">{drinkInfo.name}</h2>
             </div>
 
-            <div>
+            <div className="recContainer">
                 <p id = "Drink-Rec">Description: {drinkInfo.description}</p>
             </div>
             
-            <div class = "Button-Group">
+            <div className = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
                 <button onClick={saveRec}>Save Recipe</button>
                 <button onClick={dispRatings}>Ratings</button>
