@@ -1,5 +1,4 @@
-
-
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import './cocktail_list.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -32,6 +31,7 @@ function Cocktail_List(){
 
     return(
         <>
+        <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
         <h1>BottomsUp</h1>
         </header>

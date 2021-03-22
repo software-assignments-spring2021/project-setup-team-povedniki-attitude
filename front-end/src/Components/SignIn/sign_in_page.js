@@ -2,12 +2,15 @@
 import './sign_in_page.css';
 import React, { useState } from 'react';
 //import ReactDOM from 'react-dom';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+
 
 function SignIn(){
 
   return(
     <>
       <div id='pageContainer'>
+        <HamburgerMenu></HamburgerMenu>
         <div className="App-header">
         <h1>BottomsUp</h1>
         </div>
