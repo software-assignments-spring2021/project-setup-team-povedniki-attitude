@@ -21,7 +21,7 @@ function Cocktail_Item({name, matchScore, image, description, ingredients}){
             <h4 className = "matchScore">Match Score: {matchScore}</h4>
 
             <div className="content">
-                <img src ={image}/>
+                <img src ={image} alt=''/>
                 <div className= "textContent">
                     <div className="description">Description: {description}</div>
                     <li className= "ingredients">Ingredients: {ingredients}</li>

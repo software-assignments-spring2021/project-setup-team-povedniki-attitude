@@ -1,10 +1,7 @@
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import './cocktail_list.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import Cocktail_Item from './Cocktail_Item'
-import {Link} from 'react-router-dom'
 
 
 function Cocktail_List(){
@@ -33,7 +30,7 @@ function Cocktail_List(){
         <>
         <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
-        <h1>BottomsUp</h1>
+        <img id='logo' src='logo.png'></img>
         </header>
       <main>
         <form>

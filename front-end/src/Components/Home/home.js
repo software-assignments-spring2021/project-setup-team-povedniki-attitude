@@ -34,7 +34,7 @@ function Home(){
       <div id='pageContainer'>
         <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
-          <h1>BottomsUp</h1>  
+          <img id='logo' src='logo.png'></img>
         </header>
         <main>
           <form>
@@ -43,7 +43,7 @@ function Home(){
           </form>  
           <div id="ingContainer">
           </div>
-          <a href='/search' id='recipeSearch'>Search for Recipes</a>
+          <a href='/cocktails' id='recipeSearch'>Search for Recipes</a>
         </main>
         <footer>
           <p>Copyright © 2021 BottomsUp</p>

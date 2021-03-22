@@ -90,3 +90,7 @@
     min-height: 100vh;
   }
     
+  #logo {
+    width: 25%;
+    height: 25%;
+  }

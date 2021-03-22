@@ -55,3 +55,8 @@ img {
 height: 300px;
 position: relative;
 }
+
+#logo {
+  width: 25%;
+  height: 25%;
+}
