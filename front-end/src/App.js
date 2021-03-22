@@ -11,6 +11,8 @@ import Cocktail_Search_Page from './Components/CocktailSearch/cocktail_search_pa
 import Drink_Recipe_Page from './Components/DrinkRecipe/drink_recipe'
 
 import Account_Details_Page from './Components/AccountDetails/account_details'
+
+import Cocktail_List from './Components/CocktailList/cocktail_list'
 //var hist = createBrowserHistory();
 //history={hist}
 
@@ -23,6 +25,7 @@ function App() {
         <Route path="/searchpage" component={Cocktail_Search_Page} />
         <Route path="/drinkrecipe" component={Drink_Recipe_Page} />
         <Route path="/accountdetails" component={Account_Details_Page} />
+        <Route path="/cocktails" component={Cocktail_List} />
         {/* <Route path="/search" component={SearchPage} />
         <Route path="/discover" component={DiscoverPage} /> */}
       </Switch>
