@@ -31,13 +31,6 @@ h2{
     box-shadow: 0rem 0rem 1rem 0.1rem rgba(0,0,0,0.25);
 }
 
-/* img{
-    text-align: center;
-    position: relative;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 10rem;    
-} */
 
 .recContainer{
     display:flex;
