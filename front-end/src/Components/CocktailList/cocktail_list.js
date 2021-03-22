@@ -33,10 +33,10 @@ function Cocktail_List(){
         <img id='logo' src='logo.png'></img>
         </header>
       <main>
-        <form>
-          <input type='text' id="ingredient" name='ingredient' placeholder='Please Enter Ingredients'/>
+        {/* <form>
+          <input type='text' id="ingredientInput" name='ingredient' placeholder='Please Enter Ingredients'/>
           <input type='submit' name='ingSubmit' value='Submit'/>
-        </form>
+        </form> */}
 
 
 

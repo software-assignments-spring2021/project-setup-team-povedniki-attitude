@@ -38,7 +38,7 @@ function Cocktail_Search_Page(){
         </header>
       <main>
         <form>
-          <input type='text' id="ingredient" name='ingredient' placeholder='Search For Cocktail'/>
+          <input type='text' id="ingredientInput" name='ingredient' placeholder='Search For Cocktail'/>
           <input type='submit' name='ingSubmit' value='Submit'/>
         </form>
         <div id="SearchContainer">
