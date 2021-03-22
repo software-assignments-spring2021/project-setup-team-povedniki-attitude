@@ -1,8 +1,6 @@
 import './cocktail_search_page.css';
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import Cocktail_Item from './Cocktail_Item'
-import {Link} from 'react-router-dom'
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 

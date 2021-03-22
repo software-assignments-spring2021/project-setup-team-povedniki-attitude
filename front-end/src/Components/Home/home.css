@@ -27,7 +27,7 @@ main {
 
 #ingContainer {
   position: relative;
-  width: 80%;
+  width: 60%;
   min-height: 18em;
   height: auto;
   background-color: white;
@@ -47,6 +47,8 @@ main {
   border: 2px solid black;
   border-radius: 10px;
   font-size: 1.5em;
+  color: black;
+  background-color: #ececec;
 }
 
 #recipeSearch {

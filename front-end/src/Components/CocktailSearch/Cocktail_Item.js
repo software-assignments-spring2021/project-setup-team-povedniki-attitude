@@ -18,7 +18,7 @@ function Cocktail_Item({name,image,description}){
            {/* </div><div className="Name"> {name}</div> */}
 
            <div className="content">
-           <img src ={image}/>
+           <img src ={image} alt={''}/>
            
            <div className="description">Description: {description}</div>
            

@@ -1,6 +1,5 @@
 import './drink_recipe.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {useEffect, useState} from 'react'
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
@@ -8,8 +7,8 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 function Drink_Recipe(props){
     const [drinkInfo, setDrinkInfo] = useState({});
     useEffect(()=> {
-            setDrinkInfo(props.location.state)
-            }
+        setDrinkInfo(props.location.state)
+        }
     )
 
     const drinkName = "Moscow Mule"

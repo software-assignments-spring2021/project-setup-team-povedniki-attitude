@@ -1,10 +1,7 @@
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import './cocktail_list.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import Cocktail_Item from './Cocktail_Item'
-import {Link} from 'react-router-dom'
 
 
 function Cocktail_List(){

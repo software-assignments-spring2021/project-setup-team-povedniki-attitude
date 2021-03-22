@@ -1,6 +1,5 @@
 import './account_details.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 
