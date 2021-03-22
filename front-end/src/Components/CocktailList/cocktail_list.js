@@ -34,7 +34,7 @@ function Cocktail_List(){
         </header>
       <main>
         <form>
-          <input type='text' id="ingredient" name='ingredient' placeholder='Please Enter Ingredients'/>
+          <input type='text' id="ingredientInput" name='ingredient' placeholder='Please Enter Ingredients'/>
           <input type='submit' name='ingSubmit' value='Submit'/>
         </form>
 
