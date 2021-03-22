@@ -12,7 +12,7 @@ function SignIn(){
       <div id='pageContainer'>
         <HamburgerMenu></HamburgerMenu>
         <div className="App-header">
-        <h1>BottomsUp</h1>
+        <img id='logo' src='logo.png'></img>
         </div>
         <main>
             <div className="sign-in-container">

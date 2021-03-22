@@ -34,7 +34,7 @@ function Cocktail_Search_Page(){
         <>
          <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
-        <h1>BottomsUp</h1>
+        <img id='logo' src='logo.png'></img>
         </header>
       <main>
         <form>
