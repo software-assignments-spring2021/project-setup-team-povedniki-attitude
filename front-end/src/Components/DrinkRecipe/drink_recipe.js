@@ -2,6 +2,8 @@ import './drink_recipe.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {useEffect, useState} from 'react'
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+
 
 function Drink_Recipe(props){
     const [drinkInfo, setDrinkInfo] = useState({});
@@ -28,9 +30,10 @@ function Drink_Recipe(props){
 
     return(
         <>
-            <header className="App-header">
-            <h1>BottomsUp</h1>
-            </header>
+        <HamburgerMenu></HamburgerMenu>
+        <header className="App-header">
+        <h1>BottomsUp</h1>
+        </header>
 
         <main>
 

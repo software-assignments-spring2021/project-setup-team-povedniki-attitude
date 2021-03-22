@@ -1,6 +1,7 @@
 import './account_details.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 function AccountDetails(){
 
@@ -9,6 +10,7 @@ function AccountDetails(){
 
     return(
         <>
+        <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
         <h1>BottomsUp</h1>
         </header>
