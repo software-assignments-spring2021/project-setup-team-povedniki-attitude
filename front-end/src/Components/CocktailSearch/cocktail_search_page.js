@@ -5,7 +5,6 @@ import Cocktail_Item from './Cocktail_Item'
 import {Link} from 'react-router-dom'
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
-
 //import axios from "axios";
 
 
@@ -35,7 +34,7 @@ function Cocktail_Search_Page(){
 ]
       return(
         <>
-        <HamburgerMenu></HamburgerMenu>
+         <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
         <h1>BottomsUp</h1>
         </header>

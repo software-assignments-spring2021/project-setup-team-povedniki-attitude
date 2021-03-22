@@ -3,9 +3,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
-
-
 function AccountDetails(){
+
+
+    const imageName = "https://www.liquor.com/thmb/hY8vXSQUQNgWxLN1c-3BntZo5fM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__03__07152853__moscow-mule-720x720-recipe-61ce552013b04880901b2abfb63017fd.jpg"
+
     return(
         <>
         <HamburgerMenu></HamburgerMenu>
@@ -21,8 +23,7 @@ function AccountDetails(){
             <p><u>Account Details</u></p>
         </div>
         <div>
-            <p id="ProfilePic">Profile Picture</p>
-            {/* <img src="./front-end/src/logo.svg" ></img> */}
+            <img id="ProfilePic" src="https://www.liquor.com/thmb/hY8vXSQUQNgWxLN1c-3BntZo5fM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__03__07152853__moscow-mule-720x720-recipe-61ce552013b04880901b2abfb63017fd.jpg" alt="new" />;
             <p id="AccountName">Account Username</p>
         </div>
         <div>
