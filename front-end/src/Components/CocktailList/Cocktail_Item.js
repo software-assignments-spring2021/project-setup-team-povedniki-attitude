@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-
+import './cocktail_list.css';
 
 
 function Cocktail_Item({name, matchScore, image, description, ingredients}){
