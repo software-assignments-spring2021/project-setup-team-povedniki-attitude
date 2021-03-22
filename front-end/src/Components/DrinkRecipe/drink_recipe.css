@@ -1,79 +1,71 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 h2{
-    font-size: 70px;
+    font-size: 2.5rem;
     text-decoration: underline;
     position: relative;
-    /* width: 500px; */
-    height: 200px;
-    /* top: -1050px; */
-    left: 1325px;
-    /* margin: auto; */
+    width: 25%;
+    margin-top: 7rem;
     
     
 }
 
 .drinkInfo {
-    display:flex
+    display:flex;
+    justify-content: center;
 }
 
-#Drink-Name{
-    /* text-align: center;
-    position: relative;
-    width: 400px;
-    height: 100px;
-    top: -1050px;
-    right: -134px;
-    background-color: white;
-    border-radius: 10px; */
-    
-}
 
 #Drink-Image{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 870px;
-    /* top: -100px; */
-    /* right: 260px; */
+    position: relative;
+    width: 20%;
+    height: 20%;
     background-color: white;
-    margin: 1.5em auto;
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
+    border: 0.15rem solid white;
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgba(0,0,0,0.25);
 }
 
-img{
+/* img{
     text-align: center;
     position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    
-    
-    
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;    
+} */
+
+.recContainer{
+    display:flex;
+    justify-content: center;
 }
+    
+
 #Drink-Rec{
     position: relative;
-    /* top: -1575px; */
-    width: 820px;
-    height: 500px;
+    width: 45%;
+    height: 35rem;
     background-color: white;
-    margin: 1.5em auto;
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
-    align-items: center;
+    border: 0.15rem solid white;
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgba(0,0,0,0.25);
+
 }
 
-#Recipe{
+/* #Recipe{
     background-color: white;
     width: 20%;
     height: 18em;
-}
+} */
+
 
 
 .Button-Group button{
-    /* margin-top: 0%; */
-    padding: 10px 30px;   
+    padding: 1rem 3rem;   
     cursor: pointer;
     
 }
