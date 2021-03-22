@@ -36,18 +36,16 @@ function Drink_Recipe(props){
 
         <main>
 
-            <div>
-                <p id = "Drink-Image">Drink Image</p>
-                {/*<img src={drinkInfo.image}/>*/}
+            <div className = "drinkInfo">
+                <img  id = "Drink-Image" src={drinkInfo.image}/>
                 <h2 id = "Drink-Name">{drinkInfo.name}</h2>
-                
             </div>
 
-            <div>
-                <p id = "Drink-Rec">Drink Recipe</p>
+            <div className="recContainer">
+                <p id = "Drink-Rec">Description: {drinkInfo.description}</p>
             </div>
             
-            <div class = "Button-Group">
+            <div className = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
                 <button onClick={saveRec}>Save Recipe</button>
                 <button onClick={dispRatings}>Ratings</button>
