@@ -1,12 +1,14 @@
-
 import './home.css';
 import React, { useState } from 'react';
 //import ReactDOM from 'react-dom';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 function Home(){
   
   // list to keep track of all ingredients entered
   const [ingredients, setIngredients] = useState([]);
+
+  
 
   const onSubmit = async e => {
     e.preventDefault();
@@ -25,11 +27,14 @@ function Home(){
     }
   };
 
+
+
   return(
     <>
       <div id='pageContainer'>
+        <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
-        <h1>BottomsUp</h1>
+          <h1>BottomsUp</h1>  
         </header>
         <main>
           <form>
