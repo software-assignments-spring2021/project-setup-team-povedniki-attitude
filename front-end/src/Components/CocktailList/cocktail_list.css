@@ -16,10 +16,6 @@
     padding-top: 10px;
 }
 
-.matchScore{
-
-}
-
 .content{
     display: flex;
     padding: 10px;
@@ -44,7 +40,7 @@
 #SearchContainer{
     
     margin: auto;
-    width: 50%;
+    
     
 
 }
@@ -59,11 +55,3 @@ main{
     width: 25%;
     height: 25%;
 }
-
-#ingredientInput {
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 5px;
-    width: 40vw;
-    margin: 0 1em;
-  }

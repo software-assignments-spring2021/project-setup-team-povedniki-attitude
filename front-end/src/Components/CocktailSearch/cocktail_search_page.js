@@ -39,7 +39,7 @@ function Cocktail_Search_Page(){
       <main>
         <form>
           <input type='text' id="ingredientInput" name='ingredient' placeholder='Search For Cocktail'/>
-          <input type='submit' name='ingSubmit' value='Submit'/>
+          <input type='submit' id="ingredientSubmit" name='ingSubmit' value='Submit'/>
         </form>
         <div id="SearchContainer">
           {
@@ -58,6 +58,9 @@ function Cocktail_Search_Page(){
         </div>
         
       </main>
+      <footer>
+          <p>Copyright © 2021 BottomsUp</p>
+      </footer>
       </>
     )
 

@@ -52,7 +52,9 @@ function Drink_Recipe(props){
             </div>
             
         </main>
-
+        <footer>
+          <p>Copyright © 2021 BottomsUp</p>
+        </footer>
         </>
         )
     

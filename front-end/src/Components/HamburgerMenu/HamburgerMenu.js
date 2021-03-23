@@ -11,7 +11,7 @@ function HamburgerMenu() {
 
     return (
         <>
-            <Menu isOpen={menuOpen} onOpen={onMenuOpen} width={'20%'}>
+            <Menu isOpen={menuOpen} onOpen={onMenuOpen} >
                 <a id="home" className="menu-item" href="/">Home</a>
                 <a id="about" className="menu-item" href="/searchpage">Search for a Drink</a>
                 <a id="contact" className="menu-item" href="/signin">Account</a>
