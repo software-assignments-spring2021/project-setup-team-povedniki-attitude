@@ -12,9 +12,18 @@ function HamburgerMenu() {
     return (
         <>
             <Menu isOpen={menuOpen} onOpen={onMenuOpen} >
-                <a id="home" className="menu-item" href="/">Home</a>
-                <a id="about" className="menu-item" href="/searchpage">Search for a Drink</a>
-                <a id="contact" className="menu-item" href="/signin">Account</a>
+                <div className='itemContainer'>
+                    <img className='icon' src='./img/home.png'></img>
+                    <a id="home" className="bm-item menu-item" href="/">Home</a>
+                </div>
+                <div className='itemContainer'>
+                    <img className='icon' src='./img/search.png'></img>
+                    <a id="about" className="bm-item menu-item" href="/searchpage">Search for a Drink</a>
+                </div>
+                <div className='itemContainer'>
+                    <img className='icon' src='./img/account.png'></img>
+                    <a id="contact" className="bm-item menu-item" href="/signin">Account</a>
+                </div>
             </Menu>
         </>
     )
