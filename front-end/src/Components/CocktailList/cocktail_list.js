@@ -33,10 +33,10 @@ function Cocktail_List(){
         <img id='logo' src='logo.png'></img>
         </header>
       <main>
-        <form>
+        {/* <form>
           <input type='text' id="ingredientInput" name='ingredient' placeholder='Please Enter Ingredients'/>
           <input type='submit' name='ingSubmit' value='Submit'/>
-        </form>
+        </form> */}
 
 
 
@@ -59,6 +59,9 @@ function Cocktail_List(){
         </div>
         
       </main>
+      <footer>
+          <p>Copyright © 2021 BottomsUp</p>
+      </footer>
       </>
     )
     

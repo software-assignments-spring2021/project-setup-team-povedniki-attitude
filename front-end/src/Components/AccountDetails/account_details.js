@@ -34,7 +34,9 @@ function AccountDetails(){
             <p id="AccountProperties">History:</p>
         </div>
 
-
+        <footer>
+          <p>Copyright © 2021 BottomsUp</p>
+        </footer>
 
       </>
     )

@@ -13,9 +13,9 @@ function Home(){
   const onSubmit = async e => {
     e.preventDefault();
     // get the text that the user put in the text box
-    const ing = e.currentTarget.previousElementSibling.value;
+    let ing = e.currentTarget.previousElementSibling.value;
 
-    if (!ingredients.includes(ing)) {
+    if (!ingredients.includes(ing) && ing !== '') {
       setIngredients([...ingredients, ing]);
       console.log('submitted ingredient');
       console.log(ingredients);
@@ -25,6 +25,7 @@ function Home(){
       tempIng.classList.add('inputIng');
       document.getElementById('ingContainer').appendChild(tempIng);
     }
+    e.currentTarget.previousElementSibling.value = '';
   };
 
 
@@ -39,7 +40,7 @@ function Home(){
         <main>
           <form>
             <input type='text' id="ingredientInput" name='ingredient' placeholder='Add an Ingredient'/>
-            <input type='submit' onClick={onSubmit} name='ingSubmit' value='Submit'/>
+            <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/>
           </form>  
           <div id="ingContainer">
           </div>
