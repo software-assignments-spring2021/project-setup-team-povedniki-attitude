@@ -6,15 +6,20 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 //import axios from "axios";
 
 
-
 function Cocktail_Search_Page(){
-  // const [cocktails, setCocktails] = useState([])
+  let TrendingTitle = "Trending Recipes...";
+  const [title, setTitle] = useState(TrendingTitle)
   //   useEffect(() => {
   //       fetch("csvjson.json")
   //           .then(response => response.text())
   //           // .then((data) => setCocktails(data));
   //           .then((data) => console.log(data));
   //       })
+
+  const onSubmit = e => {
+    e.preventDefault();
+    setTitle("")
+  };
 
   let cocktailItems=[{
     name: "Martini",
@@ -31,6 +36,7 @@ function Cocktail_Search_Page(){
     },
 ]
       return(
+
         <>
          <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
@@ -39,9 +45,10 @@ function Cocktail_Search_Page(){
       <main>
         <form>
           <input type='text' id="ingredientInput" name='ingredient' placeholder='Search For Cocktail'/>
-          <input type='submit' id="ingredientSubmit" name='ingSubmit' value='Submit'/>
+          <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/>
         </form>
         <div id="SearchContainer">
+          <div id = "Suggestion"> {title} </div>
           {
             cocktailItems.map((item, index)=> {
              return(
