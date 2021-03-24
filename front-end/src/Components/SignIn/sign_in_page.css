@@ -51,9 +51,9 @@
   .sign-in-container {
       background-color:#ffffff;
       border-radius:8px;
-      width:50%;
-      margin-left:25%;
-      padding:10px;
+      width:74%;
+      margin-left:13%;
+      padding:24px 10px;
   }
   .sign-in-button {
       border-radius:12px;
@@ -66,11 +66,14 @@
       font-weight:bold;
       color:white;
   }
+  .sign-in-button.mini {
+      padding:24px 5% 24px 5%;
+  }
   #guest {
-      background-color:#606060;
+      background-color:#282c34;
   }
   .sign-in-button:hover,#guest:hover {
-    background-color:#f57e10;
+    background-color:#b44d4a;
   }
   a {text-decoration:none;}
 
@@ -93,4 +96,49 @@
   #logo {
     width: 25%;
     height: 25%;
+  }
+
+  .sign-in-footer {
+    text-align:center;
+    font-size:18px;
+  }
+
+  .sign-in-footer a {
+    font-weight:bold;
+    color:#ff837e;
+  }
+
+  .sign-in-footer a:hover {
+    color:#b44d4a;
+  }
+
+  .sign-in-field {
+    width:calc(96%-6px);
+    padding:2%;
+    border-radius:0 0 10px 10px;
+    border:3px solid #ff837e;
+    box-shadow:none;
+    font-size:18px;
+  }
+
+  .sign-in-field:focus {
+    outline:none;
+  }
+
+  .field-label {
+    text-align:left;
+    width:calc(99%-6px);
+    padding:0.5%;
+    border-radius:10px 10px 0 0;
+    border:3px solid #ff837e;
+    background-color:#ff837e;
+    font-size:16px;
+    font-weight:bold;
+    color:#ffffff;
+  }
+
+  .field-container {
+    box-shadow: 0px 0px 8px #808080;
+    border-radius:10px;
+    margin:12px 10% 12px 10%;
   }
