@@ -6,7 +6,13 @@ import React from 'react';
 
 import Home from './Components/Home/home'
 
+// page with login & register options
 import Sign_In_Page from './Components/SignIn/sign_in_page'
+
+// log in page
+import Log_In_Page from './Components/LogIn/log_in_page'
+
+import Register_Page from './Components/Register/register_page'
 
 import Cocktail_Search_Page from './Components/CocktailSearch/cocktail_search_page'
 
@@ -29,6 +35,8 @@ function App() {
         <Route path="/accountdetails" component={Account_Details_Page} />
         <Route path="/cocktails" component={Cocktail_List} />
         <Route path="/signin" component={Sign_In_Page} />
+        <Route path="/login" component={Log_In_Page} />
+        <Route path="/register" component={Register_Page} />
         {/* <Route path="/search" component={SearchPage} />
         <Route path="/discover" component={DiscoverPage} /> */}
       </Switch>
