@@ -19,15 +19,25 @@ function Home(){
     if (!ingredients.includes(ing) && ing !== '') {
       setIngredients([...ingredients, ing]);
 
-      axios({
-        method: 'post',
-        url: '/',
-        data: {
-          ingredientsList:ingredients
-        }
-      }).then( res => {
-        console.log(res.data);
+      axios.post('/', {
+        ingredient: ingredients
       })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      // axios({
+      //   method: 'post',
+      //   url: '/',
+      //   data: {
+      //     ingredientsList:ingredients
+      //   }
+      // }).then( res => {
+      //   console.log(res.data);
+      // })
 
       console.log('submitted ingredient');
       console.log(ingredients);

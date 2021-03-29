@@ -13,11 +13,28 @@ app.use(morgan('dev'));
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
 
+// app.post('/signup', (req, res) => {
+//     console.log(req.body);
+//     res.status(200).json({message: 'hello'});
+
+// })
+
 app.post('/', (req, res) => {
-    axios
-        .get('/searchbyingredient')
-        .then(apiResponse => res.json(apiResponse.data))
-        .catch(err);
-})
+    console.log(req.body);
+    res.status(200).json(req.body);
+});
+
+app.get('/searchpage', (req, res) => {
+    let drink = req.query.drink;
+    axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
+        .then(function (response) {
+            //console.log(response);
+            console.log(response.data);
+            res.status(200).json(response.data.drinks);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });    
+});
 
 module.exports = app
