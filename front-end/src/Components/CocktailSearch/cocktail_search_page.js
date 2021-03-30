@@ -19,6 +19,11 @@ function Cocktail_Search_Page(){
   const onSubmit = e => {
     e.preventDefault();
     setTitle("")
+    fetch("http://localhost:3000/json-example?search=margarita")
+    .then(response =>  response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+  
   };
 
   let cocktailItems=[{
