@@ -1,5 +1,6 @@
 import './home.css';
 import React, { useState } from 'react';
+import axios from 'axios';
 //import ReactDOM from 'react-dom';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
@@ -17,6 +18,27 @@ function Home(){
 
     if (!ingredients.includes(ing) && ing !== '') {
       setIngredients([...ingredients, ing]);
+
+      axios.post('/', {
+        ingredient: ingredients
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      // axios({
+      //   method: 'post',
+      //   url: '/',
+      //   data: {
+      //     ingredientsList:ingredients
+      //   }
+      // }).then( res => {
+      //   console.log(res.data);
+      // })
+
       console.log('submitted ingredient');
       console.log(ingredients);
 
@@ -28,8 +50,6 @@ function Home(){
     e.currentTarget.previousElementSibling.value = '';
   };
 
-
-
   return(
     <>
       <div id='pageContainer'>
@@ -38,7 +58,7 @@ function Home(){
           <img id='logo' src='logo.png'></img>
         </header>
         <main>
-          <form>
+          <form method='POST'>
             <input type='text' id="ingredientInput" name='ingredient' placeholder='Add an Ingredient'/>
             <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/>
           </form>  

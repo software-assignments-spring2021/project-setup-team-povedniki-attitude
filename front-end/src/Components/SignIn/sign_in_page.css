@@ -113,7 +113,7 @@
   }
 
   .sign-in-field {
-    width:calc(96%-6px);
+    width:95%;
     padding:2%;
     border-radius:0 0 10px 10px;
     border:3px solid #ff837e;
