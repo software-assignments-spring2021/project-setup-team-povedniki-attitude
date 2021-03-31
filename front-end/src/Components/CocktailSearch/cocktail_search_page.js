@@ -4,7 +4,6 @@ import Cocktail_Item from './Cocktail_Item'
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import axios from 'axios';
 
-//import axios from "axios";
 
 
 function Cocktail_Search_Page(){
@@ -20,24 +19,18 @@ function Cocktail_Search_Page(){
       .catch( (err) => {
         console.log(err);
       })
-      // fetch("csvjson.json")
-      //     .then(response => response.text())
-      //     // .then((data) => setCocktails(data));
-      //     .then((data) => console.log(data));
-      // })
+      
   }, [])
   const onSubmit = e => {
     e.preventDefault();
+    // setTitle("")
     setTitle("");
     
     let inputDrink = e.currentTarget.previousElementSibling.value;
-    axios.get('/searchpage', {
-      params: {
-        drink: inputDrink
-      }
-    })
+    axios.get(`http://localhost:3000/searchpage?search=${inputDrink}`)
     .then(function (response) {
       //in here put response.data.drinks into the coctailItmes list
+      setCocktails(response.data);
       console.log(response);
     })
     .catch(function (error) {
@@ -78,7 +71,6 @@ function Cocktail_Search_Page(){
              return(
                <>
                <Cocktail_Item key ={index} 
-               //this is hardcoded for now
                name={item.strDrink}
                image= {item.strDrinkThumb}
                description={item.strInstructions}/>

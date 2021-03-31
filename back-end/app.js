@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
 const axios = require("axios");
+const cors = require("cors")
+
 
 // we will put some server logic here later...
 // export the express app we created to make it available to other module
@@ -24,9 +26,10 @@ app.post('/', (req, res) => {
     res.status(200).json(req.body);
 });
 
-app.get('/searchpage', (req, res) => {
-    let drink = req.query.drink;
+app.get('/searchpage', cors(), (req, res) => { 
+    let drink = req.query.search;
     axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
+    //axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=martini`)
         .then(function (response) {
             //console.log(response);
             console.log(response.data);
@@ -38,3 +41,18 @@ app.get('/searchpage', (req, res) => {
 });
 
 module.exports = app
+
+app.get("/json-example", cors(),(req, res) => {
+    // assemble an object with the data we want to send
+    console.log(req.body)
+    const body = {
+      query: req.query.search,
+      title: "Hello!!",
+      heading: "Hello!",
+      message: "Welcome to this JSON document, served up by Express",
+      imagePath: "/static/images/donkey.jpg",
+    }
+  
+    // send the response as JSON to the client
+    res.json(body)
+  })
