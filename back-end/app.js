@@ -42,17 +42,4 @@ app.get('/searchpage', cors(), (req, res) => {
 
 module.exports = app
 
-app.get("/json-example", cors(),(req, res) => {
-    // assemble an object with the data we want to send
-    console.log(req.body)
-    const body = {
-      query: req.query.search,
-      title: "Hello!!",
-      heading: "Hello!",
-      message: "Welcome to this JSON document, served up by Express",
-      imagePath: "/static/images/donkey.jpg",
-    }
-  
-    // send the response as JSON to the client
-    res.json(body)
-  })
+
