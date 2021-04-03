@@ -41,14 +41,28 @@
     right: 70px; */
     
 }
-.content .description{
-    padding-left: 20px;
+.ingredientsContainer{
+    margin-left: 20px;
 }
+h4{
+    margin-bottom: 0px;
+}
+.content .ingredients{
+    padding-left: none;
+}
+ul {
+    text-align: left;
+ }
+
+ li.ingredients{
+     padding-left: 3px;
+     
+ }
 
 #SearchContainer{
     
     margin: auto;
-    
+    min-height: 500px;
     
 
 }
@@ -62,4 +76,8 @@ main{
 #logo {
     width: 25%;
     height: 25%;
+}
+
+#noResult {
+    height: 700px;
 }
