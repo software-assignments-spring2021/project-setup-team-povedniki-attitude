@@ -11,9 +11,22 @@ function Cocktail_Search_Page(){
   const [title, setTitle] = useState(TrendingTitle);
   const [cocktailItems, setCocktails] = useState([]);
 
+  function filterIngredients(rawData){
+    rawData.map((data)=>{
+      let ingredients =[]
+      for (const[key,value] of Object.entries(data)){
+        if(key.includes("strIngredient") &&value!== ""&& value!==null){
+          ingredients.push(value)
+        }
+      }
+      data["ingredients"]= ingredients;
+    })
+  }
+
   useEffect(() => {
     axios('https://www.thecocktaildb.com/api/json/v2/9973533/latest.php')
       .then( (response) => {
+        filterIngredients(response.data.drinks)
         setCocktails(response.data.drinks);
       })
       .catch( (err) => {
@@ -30,8 +43,10 @@ function Cocktail_Search_Page(){
     axios.get(`http://localhost:3000/searchpage?search=${inputDrink}`)
     .then(function (response) {
       //in here put response.data.drinks into the coctailItmes list
+      
+      filterIngredients(response.data)
       setCocktails(response.data);
-      console.log(response);
+      console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
@@ -67,16 +82,20 @@ function Cocktail_Search_Page(){
         <div id="SearchContainer">
           <div id = "Suggestion"> {title} </div>
           {
+            cocktailItems !== null?
             cocktailItems.map((item, index)=> {
              return(
                <>
                <Cocktail_Item key ={index} 
                name={item.strDrink}
                image= {item.strDrinkThumb}
-               description={item.strInstructions}/>
+               ingredients={item.ingredients}/>
+               {console.log(item)}
                </>
              ) 
             })
+            : <div id = "noResults">No results found!</div>
+
           }
         </div>
         
