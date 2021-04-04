@@ -23,10 +23,24 @@ function Cocktail_Search_Page(){
     })
   }
 
+
+  function filterIngredientsMeasure(rawData){
+    rawData.map((data)=>{
+      let ingredientsMeasure =[]
+      for (const[key,value] of Object.entries(data)){
+        if(key.includes("strMeasure") &&value!== ""&& value!==null){
+          ingredientsMeasure.push(value)
+        }
+      }
+      data["ingredientsMeasure"]= ingredientsMeasure;
+    })
+  }
+
   useEffect(() => {
     axios('https://www.thecocktaildb.com/api/json/v2/9973533/latest.php')
       .then( (response) => {
         filterIngredients(response.data.drinks)
+        filterIngredientsMeasure(response.data.drinks)
         setCocktails(response.data.drinks);
       })
       .catch( (err) => {
@@ -45,6 +59,7 @@ function Cocktail_Search_Page(){
       //in here put response.data.drinks into the coctailItmes list
       
       filterIngredients(response.data)
+      filterIngredientsMeasure(response.data)
       setCocktails(response.data);
       console.log(response.data);
     })
@@ -90,7 +105,8 @@ function Cocktail_Search_Page(){
                name={item.strDrink}
                image= {item.strDrinkThumb}
                instructions = {item.strInstructions}
-               ingredients={item.ingredients}/>
+               ingredients={item.ingredients}
+               ingredientsMeasure={item.ingredientsMeasure}/>
                {console.log(item)}
                </>
              ) 

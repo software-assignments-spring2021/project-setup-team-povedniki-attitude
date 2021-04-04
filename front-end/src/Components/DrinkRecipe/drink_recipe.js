@@ -33,7 +33,7 @@ function Drink_Recipe(props){
         <header className="App-header">
         <img id='logo' src='logo.png'></img>
         </header>
-
+        
         <main>
 
             <div className = "drinkInfo">
@@ -43,8 +43,10 @@ function Drink_Recipe(props){
 
             <div className="recContainer">
                 <p id = "Drink-Rec">
+                    Glass Rec:
                     Description: {drinkInfo.instructions} 
                     Ingredients:{drinkInfo.ingredients}
+                    Measurements: {drinkInfo.ingredientsMeasure}
                 </p>
             </div>
             
