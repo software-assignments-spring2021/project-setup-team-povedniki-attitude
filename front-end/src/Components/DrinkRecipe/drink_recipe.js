@@ -42,7 +42,10 @@ function Drink_Recipe(props){
             </div>
 
             <div className="recContainer">
-                <p id = "Drink-Rec">Description: {drinkInfo.description}</p>
+                <p id = "Drink-Rec">
+                    Description: {drinkInfo.instructions} 
+                    Ingredients:{drinkInfo.ingredients}
+                </p>
             </div>
             
             <div className = "Button-Group">

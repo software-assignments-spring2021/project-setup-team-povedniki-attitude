@@ -89,6 +89,7 @@ function Cocktail_Search_Page(){
                <Cocktail_Item key ={index} 
                name={item.strDrink}
                image= {item.strDrinkThumb}
+               instructions = {item.strInstructions}
                ingredients={item.ingredients}/>
                {console.log(item)}
                </>
