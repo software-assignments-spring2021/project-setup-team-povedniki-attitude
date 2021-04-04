@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-
+//test
 
 function Cocktail_Item({name,image,ingredients}){
     return(
