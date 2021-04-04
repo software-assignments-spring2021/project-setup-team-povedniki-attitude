@@ -14,7 +14,6 @@ function CompleteDrinkList(){
         <img id='logo' src='logo.png'></img>
         </header>
 
-
         <footer>
           <p>Copyright © 2021 BottomsUp</p>
         </footer>
