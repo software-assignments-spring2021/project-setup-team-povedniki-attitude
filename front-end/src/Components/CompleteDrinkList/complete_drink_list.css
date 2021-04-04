@@ -1,4 +1,91 @@
 p {
   color: navy;
   text-transform: uppercase;
+  font-size: 30px;
+}
+
+
+
+#Suggestion{
+  color:black;
+  padding-top: 25px;
+  font-style: italic;
+  text-align: left;
+  padding-left: 30px;
+  
+}
+
+.Cocktail_Item{
+  /* border-style: solid; */
+  border-radius: 25px;
+  width: 800px;
+  margin: 10px;
+  background-color: white;
+  /* background-color: #E8EBF7!important; */
+  
+  
+}
+.Cocktail_Item:hover{
+  /* background-color: gray; */
+  box-shadow: 5px 5px gray;
+  
+}
+.name{
+  padding: 10px;
+  color: black;
+}
+.content{
+  display: flex;
+  padding: 10px;
+  /* justify-content: space-around; */
+  font-style: italic;
+  color: black;
+}
+
+.content img{
+  max-width: 175px;
+  max-height: 175px;
+  /* position: relative;
+  right: 70px; */
+  
+}
+.ingredientsContainer{
+  margin-left: 20px;
+}
+h4{
+  margin-bottom: 0px;
+}
+.content .ingredients{
+  padding-left: none;
+}
+ul {
+  text-align: left;
+}
+
+li.ingredients{
+   padding-left: 3px;
+   
+}
+
+#SearchContainer{
+  
+  margin: auto;
+  min-height: 500px;
+  
+
+}
+#SearchContainer a{
+  text-decoration: none;
+}
+main{
+  width: 100%;
+}
+
+#logo {
+  width: 25%;
+  height: 25%;
+}
+
+#noResult {
+  height: 700px;
 }

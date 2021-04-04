@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-//hello
-
 function Cocktail_Item({name,image,ingredients}){
     return(
         <Link to={{
