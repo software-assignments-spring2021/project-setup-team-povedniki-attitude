@@ -43,10 +43,21 @@ function Drink_Recipe(props){
 
             <div className="recContainer">
                 <p id = "Drink-Rec">
-                    Glass Rec:
-                    Description: {drinkInfo.instructions} 
-                    Ingredients:{drinkInfo.ingredients}
-                    Measurements: {drinkInfo.ingredientsMeasure}
+                    <h4>Glass Recommended:</h4> {drinkInfo.glass}
+                    <h4>Instructions:</h4> {drinkInfo.instructions} 
+                    <div className= "ingredientsContainer">
+                        <h4>Ingredients Needed:</h4>
+                            <ul>
+                            {
+                                drinkInfo.ingredientsMeasure.map((ingredient) => {
+                                return (
+                                 <li className= "ingredients">{ingredient}</li>
+                                )
+                                })
+                             } 
+                             </ul>
+           
+                    </div>
                 </p>
             </div>
             

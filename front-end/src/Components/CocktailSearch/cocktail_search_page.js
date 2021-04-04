@@ -26,11 +26,24 @@ function Cocktail_Search_Page(){
 
   function filterIngredientsMeasure(rawData){
     rawData.map((data)=>{
-      let ingredientsMeasure =[]
+      let ingredients =[]
+      for (const[key,value] of Object.entries(data)){
+        if(key.includes("strIngredient") &&value!== ""&& value!==null){
+          ingredients.push(value)
+        }
+      }
+      data["ingredients"]= ingredients;
+
+
+      let measures =[]
       for (const[key,value] of Object.entries(data)){
         if(key.includes("strMeasure") &&value!== ""&& value!==null){
-          ingredientsMeasure.push(value)
+          measures.push(value)
         }
+      }
+      let ingredientsMeasure = []
+      for (let i = 0; i < ingredients.length; i++){
+        ingredientsMeasure.push(`${measures[i]} of ${ingredients[i]}`)
       }
       data["ingredientsMeasure"]= ingredientsMeasure;
     })
@@ -106,7 +119,8 @@ function Cocktail_Search_Page(){
                image= {item.strDrinkThumb}
                instructions = {item.strInstructions}
                ingredients={item.ingredients}
-               ingredientsMeasure={item.ingredientsMeasure}/>
+               ingredientsMeasure={item.ingredientsMeasure}
+               glass= {item.strGlass}/>
                {console.log(item)}
                </>
              ) 

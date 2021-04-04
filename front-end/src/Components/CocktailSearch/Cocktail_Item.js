@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 
-function Cocktail_Item({name,image,ingredients,instructions, ingredientsMeasure}){
+function Cocktail_Item({name,image,ingredients,instructions, ingredientsMeasure, glass}){
     return(
         <Link to={{
             pathname: "/drinkrecipe",
@@ -12,7 +12,8 @@ function Cocktail_Item({name,image,ingredients,instructions, ingredientsMeasure}
                 image,
                 ingredients,
                 instructions,
-                ingredientsMeasure
+                ingredientsMeasure,
+                glass
                 }
             }}>
         <div className="Cocktail_Item">
