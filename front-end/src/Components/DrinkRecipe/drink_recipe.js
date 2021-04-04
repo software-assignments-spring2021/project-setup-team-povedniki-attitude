@@ -45,6 +45,7 @@ function Drink_Recipe(props){
                 <p id = "Drink-Rec">
                     Description: {drinkInfo.instructions} 
                     Ingredients:{drinkInfo.ingredients}
+                    Measurements: {drinkInfo.ingredientsMeasure}
                 </p>
             </div>
             
