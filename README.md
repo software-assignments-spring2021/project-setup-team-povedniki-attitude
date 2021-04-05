@@ -33,7 +33,24 @@ This project came together while brainstorming useful products for busy adults s
 For those interested in contributing to this project, a link to our contributions info page is linked below.
 
 ## Building and Testing
-For set up, you must first clone the repository onto your local machine. In order to install all the dependencies for the back end you must first open the terminal and cd into back-end. Then from there you must write npm install and then npm start. This will load up the back end server. Following this you must open up another terminal window and cd into front-end. From there you will again write npm install and then npm start. The terminal will then prompt you to run the app on another port because the back end will be running on port 3000, you must respond yes to this. After this the front end will load in your local browser. 
+For set up, you must first write the following command in the command line:
+```
+git clone https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude.git
+```
+
+In order to install all the dependencies for the back end write:
+```
+cd back-end
+npm install
+npm start
+```
+Following this you must open up another command line window and perform:
+```
+cd front-end
+npm install
+npm start
+```
+The command will then prompt you to run the app on another port because the back end will be running on port 3000, you must respond yes to this. After this the front end will load in your local browser. 
 
 ## Additional Links: 
 - [Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
