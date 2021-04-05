@@ -21,6 +21,10 @@ function HamburgerMenu() {
                     <a id="about" className="bm-item menu-item" href="/searchpage">Search for a Drink</a>
                 </div>
                 <div className='itemContainer'>
+                    <img className='icon' src='./img/search.png'></img>
+                    <a id="list" className="bm-item menu-item" href="/completedrinklist">Complete Drink Directory</a>
+                </div>
+                <div className='itemContainer'>
                     <img className='icon' src='./img/account.png'></img>
                     <a id="contact" className="bm-item menu-item" href="/signin">Account</a>
                 </div>
