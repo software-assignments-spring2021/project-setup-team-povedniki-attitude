@@ -22,7 +22,7 @@ function HamburgerMenu() {
                 </div>
                 <div className='itemContainer'>
                     <img className='icon' src='./img/dictionary.png'></img>
-                    <a id="list" className="bm-item menu-item" href="/completedrinklist">Complete Drink Directory</a>
+                    <a id="list" className="bm-item menu-item" href="/completedrinklist">Drink Database</a>
                 </div>
                 <div className='itemContainer'>
                     <img className='icon' src='./img/account.png'></img>
