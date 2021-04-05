@@ -13,12 +13,10 @@ function Cocktail_Item({name,image,ingredients}){
             }}>
         <div className="Cocktail_Item">
             <h3 className="name">{name}</h3>
-           {/* </div><div className="Name"> {name}</div> */}
 
            <div className="content">
            <img src ={image} alt={''}/>
            
-           {/* <div className="ingredients">{ingredients}</div> */}
            <div className= "ingredientsContainer">
            <h4>Ingredients needed:</h4>
            <ul>
