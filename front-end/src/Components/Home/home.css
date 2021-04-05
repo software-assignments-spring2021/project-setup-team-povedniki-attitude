@@ -103,3 +103,19 @@ footer p {
   width: 25%;
   height: 25%;
 }
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  width: 10px;
+  height: 10px;
+}
+
+.hide {
+  opacity: .5;
+}

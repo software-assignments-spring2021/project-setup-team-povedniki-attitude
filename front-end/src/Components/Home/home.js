@@ -24,7 +24,29 @@ function Home(){
         const tempIng = document.createElement('p');
         tempIng.textContent = storage[i];
         tempIng.classList.add('inputIng');
+
+        let tempImg = document.createElement('img');
+        tempImg.src = '/img/close.png';
+        tempImg.classList.add('close', 'hidden');
+        tempIng.appendChild(tempImg);
+
         document.getElementById('ingContainer').appendChild(tempIng);
+
+        tempIng.onmouseover = (event) => {
+          event.currentTarget.style.backgroundColor = 'rgb(115, 162, 222)';
+          event.currentTarget.children[0].classList.toggle('hidden');
+          //console.log(tempIng.children[0]);
+          tempIng.children[0].onClick = (event) => {
+            document.querySelector('#ingContainer').removeChild(tempIng);
+            //console.log(ingredients);
+          }
+        }
+        tempIng.onmouseout = (event) => {
+          event.currentTarget.style.backgroundColor = '#1e2c3e';
+          event.currentTarget.children[0].classList.toggle('hidden');
+        }
+
+        
       }
     }
   }, [])
@@ -57,10 +79,32 @@ function Home(){
       const tempIng = document.createElement('p');
       tempIng.textContent = ing;
       tempIng.classList.add('inputIng');
+
+      let tempImg = document.createElement('img');
+      tempImg.src = '/img/close.png';
+      tempImg.classList.add('close', 'hidden');
+      tempIng.appendChild(tempImg);
+
       document.getElementById('ingContainer').appendChild(tempIng);
+
+      tempIng.onmouseover = (event) => {
+        event.currentTarget.style.backgroundColor = 'rgb(115, 162, 222)';
+        event.currentTarget.children[0].classList.toggle('hidden');
+        console.log(tempIng.children);
+        tempIng.children[0].onClick = (event) => {
+          document.querySelector('#ingContainer').removeChild(tempIng);
+          //console.log(ingredients);
+        }
+      }
+      tempIng.onmouseout = (event) => {
+        event.currentTarget.style.backgroundColor = '#1e2c3e';
+        event.currentTarget.children[0].classList.toggle('hidden');
+      }
     }
     e.currentTarget.previousElementSibling.value = '';
   };
+
+
 
   return(
     <>
