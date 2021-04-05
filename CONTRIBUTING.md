@@ -31,3 +31,4 @@ Clone repository through your command line using:<br>
 Then open repository into your IDE of choice to begin contributions.
 
 ## Building and Testing
+As shown above must first clone the repository onto your local machine. In order to install all the dependencies for the back end you must first open the terminal and cd into back-end. Then from there you must write npm install and then npm start. This will load up the back end server. Following this you must open up another terminal window and cd into front-end. From there you will again write npm install and then npm start. The terminal will then prompt you to run the app on another port because the back end will be running on port 3000, you must respond yes to this. After this the front end will load in your local browser. 
