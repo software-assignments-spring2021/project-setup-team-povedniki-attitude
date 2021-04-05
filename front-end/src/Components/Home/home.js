@@ -1,6 +1,6 @@
 import './home.css';
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+//import axios from 'axios';
 //import ReactDOM from 'react-dom';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
@@ -9,7 +9,47 @@ function Home(){
   // list to keep track of all ingredients entered
   const [ingredients, setIngredients] = useState([]);
 
-  
+  useEffect(() => {
+    if (window.localStorage.getItem('ingredients')) {
+      // process to get list from localstorage and then convert to usable list
+      let storage = (window.localStorage.getItem('ingredients'));
+      storage = storage.split("\"");
+      for (let j = 0; j < storage.length; j++) {
+        storage.splice(j, 1);
+      }
+      setIngredients(storage);
+      // console.log(storage);
+      // console.log(storage.length);
+      for (let i = 0; i < storage.length; i++) {
+        const tempIng = document.createElement('p');
+        tempIng.textContent = storage[i];
+        tempIng.classList.add('inputIng');
+
+        let tempImg = document.createElement('img');
+        tempImg.src = '/img/close.png';
+        tempImg.classList.add('close', 'hidden');
+        tempIng.appendChild(tempImg);
+
+        document.getElementById('ingContainer').appendChild(tempIng);
+
+        tempIng.onmouseover = (event) => {
+          event.currentTarget.style.backgroundColor = 'rgb(115, 162, 222)';
+          event.currentTarget.children[0].classList.toggle('hidden');
+          //console.log(tempIng.children[0]);
+          tempIng.children[0].onClick = (event) => {
+            document.querySelector('#ingContainer').removeChild(tempIng);
+            //console.log(ingredients);
+          }
+        }
+        tempIng.onmouseout = (event) => {
+          event.currentTarget.style.backgroundColor = '#1e2c3e';
+          event.currentTarget.children[0].classList.toggle('hidden');
+        }
+
+        
+      }
+    }
+  }, [])
 
   const onSubmit = async e => {
     e.preventDefault();
@@ -19,36 +59,52 @@ function Home(){
     if (!ingredients.includes(ing) && ing !== '') {
       setIngredients([...ingredients, ing]);
 
-      axios.post('/', {
-        ingredient: ingredients
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
-      // axios({
-      //   method: 'post',
-      //   url: '/',
-      //   data: {
-      //     ingredientsList:ingredients
-      //   }
-      // }).then( res => {
-      //   console.log(res.data);
+      // to be implemented after users are created
+      // axios.post('http://localhost:3000/', {
+      //   ingredient: ingredients
       // })
+      // .then(function (response) {
+      //   console.log('saved ingredient');
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
 
       console.log('submitted ingredient');
       console.log(ingredients);
+      window.localStorage.setItem('ingredients', JSON.stringify(ingredients));
+      //console.log(JSON.parse(window.localStorage.getItem('ingredients')));
 
       const tempIng = document.createElement('p');
-      tempIng.innerHTML = ing;
+      tempIng.textContent = ing;
       tempIng.classList.add('inputIng');
+
+      let tempImg = document.createElement('img');
+      tempImg.src = '/img/close.png';
+      tempImg.classList.add('close', 'hidden');
+      tempIng.appendChild(tempImg);
+
       document.getElementById('ingContainer').appendChild(tempIng);
+
+      tempIng.onmouseover = (event) => {
+        event.currentTarget.style.backgroundColor = 'rgb(115, 162, 222)';
+        event.currentTarget.children[0].classList.toggle('hidden');
+        console.log(tempIng.children);
+        tempIng.children[0].onClick = (event) => {
+          document.querySelector('#ingContainer').removeChild(tempIng);
+          //console.log(ingredients);
+        }
+      }
+      tempIng.onmouseout = (event) => {
+        event.currentTarget.style.backgroundColor = '#1e2c3e';
+        event.currentTarget.children[0].classList.toggle('hidden');
+      }
     }
     e.currentTarget.previousElementSibling.value = '';
   };
+
+
 
   return(
     <>

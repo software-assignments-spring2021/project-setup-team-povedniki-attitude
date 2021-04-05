@@ -59,7 +59,7 @@ function Cocktail_Search_Page(){
                 justifyContent: "center",
                 alignItems: "center",
             }}>
-            <p><u>Drink Directory</u></p>
+            <p id="dirName"><u>Drink Directory</u></p>
         </div>
       <main>
         <div id="SearchContainer">
