@@ -1,0 +1,57 @@
+.Cocktail_Item{
+    /* border-style: solid; */
+    border-radius: 25px;
+    width: 800px;
+    margin: 10px;
+    background-color: white;
+    
+    
+}
+.Cocktail_Item:hover{
+    /* background-color: gray; */
+    box-shadow: 5px 5px gray;
+    
+}
+.name{
+    padding-top: 10px;
+}
+
+.content{
+    display: flex;
+    padding: 10px;
+    /* justify-content: space-around; */
+    font-style: italic;
+    
+}
+
+.content img{
+    max-width: 175px;
+    max-height: 175px;    
+    border-radius: 25px;
+}
+.content .description{
+    padding-left: 20px;
+}
+
+.content .ingredients{
+    padding-top: 10px;
+}
+
+#SearchContainer{
+    
+    margin: auto;
+    
+    
+
+}
+#SearchContainer a{
+    text-decoration: none;
+}
+main{
+    width: 100%;
+}
+
+#logo {
+    width: 25%;
+    height: 25%;
+}

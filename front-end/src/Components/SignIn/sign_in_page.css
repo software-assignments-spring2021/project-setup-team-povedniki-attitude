@@ -1,0 +1,144 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .App-header h1 {
+    margin: .2em 0;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  main {
+    margin-top: 3em;
+    padding-bottom: 5rem;
+  }
+  
+  input {
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
+  }
+  
+  .sign-in-container {
+      background-color:#ffffff;
+      border-radius:8px;
+      width:74%;
+      margin-left:13%;
+      padding:24px 10px;
+  }
+  .sign-in-button {
+      border-radius:12px;
+      background-color:#e47979;
+      width:70%;
+      padding:5%;
+      margin:10%;
+      margin-top:24px;
+      margin-bottom:24px;
+      font-weight:bold;
+      color:white;
+  }
+  .sign-in-button.mini {
+      padding:24px 5% 24px 5%;
+  }
+  #guest {
+      background-color:#282c34;
+  }
+  .sign-in-button:hover,#guest:hover {
+    background-color:#b44d4a;
+  }
+  a {text-decoration:none;}
+
+  footer {
+    background-color: #282c34;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(3px + 2vmin);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  #pageContainer {
+    position: relative;
+    min-height: 100vh;
+  }
+    
+  #logo {
+    width: 25%;
+    height: 25%;
+  }
+
+  .sign-in-footer {
+    text-align:center;
+    font-size:18px;
+  }
+
+  .sign-in-footer a {
+    font-weight:bold;
+    color:#ff837e;
+  }
+
+  .sign-in-footer a:hover {
+    color:#b44d4a;
+  }
+
+  .sign-in-field {
+    width:95%;
+    padding:2%;
+    border-radius:0 0 10px 10px;
+    border:3px solid #ff837e;
+    box-shadow:none;
+    font-size:18px;
+  }
+
+  .sign-in-field:focus {
+    outline:none;
+  }
+
+  .field-label {
+    text-align:left;
+    width:calc(99%-6px);
+    padding:0.5%;
+    border-radius:10px 10px 0 0;
+    border:3px solid #ff837e;
+    background-color:#ff837e;
+    font-size:16px;
+    font-weight:bold;
+    color:#ffffff;
+  }
+
+  .field-container {
+    box-shadow: 0px 0px 8px #808080;
+    border-radius:10px;
+    margin:12px 10% 12px 10%;
+  }

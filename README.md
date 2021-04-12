@@ -16,7 +16,7 @@ The user will be able to enter in any ingredients available to them and our prod
 #### Themes:
 - Account management
 - Record keeping
-- Eduction
+- Education
 - Frugalness
 
 ## The Team
@@ -33,7 +33,24 @@ This project came together while brainstorming useful products for busy adults s
 For those interested in contributing to this project, a link to our contributions info page is linked below.
 
 ## Building and Testing
-TBA
+For set up, you must first write the following command in the command line:
+```
+git clone https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude.git
+```
+
+In order to install all the dependencies for the back end write:
+```
+cd back-end
+npm install
+npm start
+```
+Following this you must open up another command line window and perform:
+```
+cd front-end
+npm install
+npm start
+```
+The command will then prompt you to run the app on another port because the back end will be running on port 3000, you must respond yes to this. After this the front end will load in your local browser. 
 
 ## Additional Links: 
 - [Original Proposal](https://github.com/agile-dev-assignments/project-proposal-theboys)
