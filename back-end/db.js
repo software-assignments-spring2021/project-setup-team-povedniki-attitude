@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 
-const IngredientSchema = new mongoose.Schema({
+const FavoritesSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    ingredients: [String]
+    favorites: [String]
 });
 
 const UserSchema = new mongoose.Schema({
@@ -21,13 +21,13 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    ingredients: {
+    favorites: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Ingredient'
+        ref: 'Favorite'
     }
 });
 
-mongoose.model('Ingredient', IngredientSchema);
+mongoose.model('Favorite', FavoritesSchema);
 mongoose.model('User', UserSchema);
 
 mongoose.connect('mongodb://localhost/bottomsup');

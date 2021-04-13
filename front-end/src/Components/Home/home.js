@@ -75,7 +75,7 @@ function Home(){
       <div id='pageContainer'>
         <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
-          <img id='logo' src='logo.png'></img>
+          <img id='logo' src='logo.png' alt='BottomsUp'></img>
         </header>
         <main>
           <form method='POST'>
