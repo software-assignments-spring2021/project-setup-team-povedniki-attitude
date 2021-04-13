@@ -6,7 +6,11 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
 const axios = require("axios");
-const cors = require("cors")
+const cors = require("cors");
+const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 // import mocha and chai
 const bcrypt = require('bcryptjs');
 // const chai = require('chai');
@@ -14,18 +18,46 @@ const bcrypt = require('bcryptjs');
 // const mock = require('mock-require');
 // const User = require('./mock-user.js').User;
 // const { assert } = require("console");
-
-// we will put some server logic here later...
-// export the express app we created to make it available to other module
+const passport = require('passport')
+  , LocalStrategy = require('passport-local').Strategy;
+require('./db');
 app.use(morgan('dev'));
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
+app.use(cookieParser('keyboard cat'));
+app.use(session({ 
+    resave: false,
+    saveUninitialized: true,
+    secret: 'secret',
+}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
-// app.post('/signup', (req, res) => {
-//     console.log(req.body);
-//     res.status(200).json({message: 'hello'});
+const User = mongoose.model('User');
 
-// })
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    User.findOne({ username: username }, function(err, user) {
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username or password.' });
+      }
+    //   if (!user.validPassword(password)) {
+    //     return done(null, false, { message: 'Incorrect password.' });
+    //   }
+      return done(null, user);
+    });
+  }
+));
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
+});
 
 app.post('/', (req, res) => {
     console.log(req.body);
@@ -45,6 +77,21 @@ app.get('/searchpage', cors(), (req, res) => {
             console.log(error);
         });    
 });
+
+app.get('/signin', (req, res) => {
+    if (req.user) {
+        res.redirect('/accountdetails');
+    }
+    else {
+        res.status(200).json();
+    }
+});
+
+app.post('/login',
+    passport.authenticate('local', { successRedirect: '/home',
+                                    failureRedirect: '/login',
+                                    })
+);
 
 // cocktail search unit test
 // describe("cocktail search",function(){
