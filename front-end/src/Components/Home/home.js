@@ -1,18 +1,45 @@
 import './home.css';
 import React, { useEffect, useState } from 'react';
-//import axios from 'axios';
+import axios from 'axios';
 //import ReactDOM from 'react-dom';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+
+
 
 function Home(){
   
   // list to keep track of all ingredients entered
   const [ingredients, setIngredients] = useState([]);
+  const [ingredientsArray, setIngredientsArray] = useState([]);
+  
+  function makeIngredientsArray(rawData) {
+    let result = [];
+    rawData.map((data) => {
+      let arrayIngredients = [];
+      for (const [key, value] of Object.entries(data)) {
+        if (key.includes("strIngredient") && value !== "" && value !== null) {
+          arrayIngredients.push(value);
+        }
+      }
+      result = [...result, ...arrayIngredients];
+    });
+    setIngredientsArray((array) => array.concat([...new Set(result)]));
+    
+  }
 
   useEffect(() => {
     if (window.localStorage.getItem('ingredients')) {
       window.localStorage.setItem('ingredients', '');
     }
+    axios('https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=')
+      .then( (response) => {
+        makeIngredientsArray(response.data.drinks)
+        console.log(ingredientsArray)
+      })
+      .catch( (err) => {
+        console.log(err);
+      })
+
   }, [])
 
   const onSubmit = async e => {
