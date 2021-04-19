@@ -3,12 +3,15 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 //import ReactDOM from 'react-dom';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+import { TextField } from "@material-ui/core";
+import { Autocomplete } from "@material-ui/lab";
 
 
 
 function Home(){
   
   // list to keep track of all ingredients entered
+  const [input, setInput] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [ingredientsArray, setIngredientsArray] = useState([]);
   
@@ -45,10 +48,11 @@ function Home(){
   const onSubmit = async e => {
     e.preventDefault();
     // get the text that the user put in the text box
-    let ing = e.currentTarget.previousElementSibling.value;
+    // let ing = e.currentTarget.previousElementSibling.value;
+    
 
-    if (!ingredients.includes(ing) && ing !== '') {
-      setIngredients([...ingredients, ing]);
+    if (!ingredients.includes(input) && input !== "" && ingredientsArray.includes(input)) {
+      setIngredients([...ingredients, input]);
 
       // to be implemented after users are created
       // axios.post('http://localhost:3000/', {
@@ -68,7 +72,7 @@ function Home(){
       //console.log(JSON.parse(window.localStorage.getItem('ingredients')));
 
       const tempIng = document.createElement('p');
-      tempIng.textContent = ing;
+      tempIng.textContent = input;
       tempIng.classList.add('inputIng');
 
       let tempImg = document.createElement('img');
@@ -106,8 +110,30 @@ function Home(){
         </header>
         <main>
           <form method='POST'>
-            <input type='text' id="ingredientInput" name='ingredient' placeholder='Add an Ingredient'/>
-            <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/>
+            {/* <input type='text' id="ingredientInput" name='ingredient' placeholder='Add an Ingredient'/>
+            <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/> */}
+            <div id= "searchAndSubmit">
+            <Autocomplete 
+              // id="ingredientInput"
+              id="combo-box"
+              onSelect={(selectedOption) =>
+                setInput(selectedOption.target.value)
+              }
+              options={ingredientsArray}
+              getOptionLabel={(option) => option}
+              style={{ width: 500 }}
+              renderInput={(params) => (
+                <TextField {...params} label="Search for Ingredients" variant="outlined" />
+              )}
+            />
+            <input
+                type="submit"
+                id="ingredientSubmit"
+                onClick={onSubmit}
+                name="ingSubmit"
+                value="Submit"
+              />
+            </div>
           </form>  
           <div id="ingContainer">
           </div>
