@@ -101,9 +101,9 @@ function Random_Drink(props){
             {/* <div className = "drinkInfo">
                 <img id = "Drink-Image" src={drinkInfo[0].strDrinkThumb}/>
                 <h2 id = "Drink-Name">{drinkInfo[0].strDrink}</h2>
-            </div> */}
+            </div>
 
-            {/* <div className="recContainer">
+            <div className="recContainer">
                 <p id = "Drink-Rec">
                     <h4>Glass Recommended:</h4> {drinkInfo[0].strGlass}
                     <h4>Description/Instructions:</h4> {drinkInfo[0].strInstructions}
