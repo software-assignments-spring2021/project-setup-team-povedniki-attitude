@@ -1,0 +1,74 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+h2{
+    font-size: 2.5rem;
+    text-decoration: underline;
+    position: relative;
+    width: 25%;
+    margin-top: 7rem;
+    
+    
+}
+
+.drinkInfo {
+    display:flex;
+    justify-content: center;
+}
+
+
+#Drink-Image{
+    position: relative;
+    width: 20%;
+    height: 20%;
+    background-color: white;
+    border: 0.15rem solid white;
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgba(0,0,0,0.25);
+}
+
+
+.recContainer{
+    display:flex;
+    justify-content: center;
+}
+    
+
+#Drink-Rec{
+    position: relative;
+    width: 45%;
+    height: 35rem;
+    background-color: white;
+    border: 0.15rem solid white;
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgba(0,0,0,0.25);
+
+}
+
+.ingList{
+    
+}
+
+/* #Recipe{
+    background-color: white;
+    width: 20%;
+    height: 18em;
+} */
+
+
+
+.Button-Group button{
+    padding: 1rem 3rem;   
+    cursor: pointer;
+    
+}
+
+
+#logo {
+    width: 25%;
+    height: 25%;
+}
