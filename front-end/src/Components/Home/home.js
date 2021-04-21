@@ -148,7 +148,7 @@ function Home(){
           <div id="ingContainer">
           </div>
           <a href='/cocktails' id='recipeSearch'>Search for Recipes</a>
-          <a href='/randomdrink' id='recipeSearch'>Surprise Me!</a>
+          <a href='/randomdrink' id='randomSearch'>Surprise Me!</a>
         </main>
         <footer>
           <p>Copyright © 2021 BottomsUp</p>
