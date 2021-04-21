@@ -5,6 +5,7 @@ import axios from 'axios';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import { TextField } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
+import Button from '@material-ui/core/Button';
 
 
 
@@ -123,16 +124,25 @@ function Home(){
               getOptionLabel={(option) => option}
               style={{ width: 500 }}
               renderInput={(params) => (
-                <TextField {...params} label="Search for Ingredients" variant="outlined" />
+                <TextField {...params} label="Search for Ingredients" variant="filled" />
               )}
             />
-            <input
+            {/* <input
+            
                 type="submit"
                 id="ingredientSubmit"
                 onClick={onSubmit}
                 name="ingSubmit"
                 value="Submit"
-              />
+                
+              /> */}
+              
+              <Button 
+              variant="outlined" 
+              type="submit"
+              onClick={onSubmit}
+              name="ingSubmit"
+              >submit</Button>
             </div>
           </form>  
           <div id="ingContainer">
