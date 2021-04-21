@@ -5,40 +5,7 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import axios from 'axios';
 
 
-// let lodash = require('lodash');    
-
-// var countries = [
-//     {"key": "DE", "name": "Deutschland", "active": false},
-//     {"key": "ZA", "name": "South Africa", "active": true}
-// ];
-
-// var filteredByFunction = lodash.filter(countries, function (country) {
-//     return country.key === "DE";
-// });
-// // => [{"key": "DE", "name": "Deutschland"}];
-
-// var filteredByObjectProperties = lodash.filter(countries, { "key": "DE" });
-// // => [{"key": "DE", "name": "Deutschland"}];
-
-// var filteredByProperties = lodash.filter(countries, ["key", "ZA"]);
-// // => [{"key": "ZA", "name": "South Africa"}];
-
-// var filteredByProperty = lodash.filter(countries, "active");
-// // => [{"key": "ZA", "name": "South Africa"}];
-
-
-// <div
-// style={{
-//     display: "flex",
-//     justifyContent: "center",
-//     alignItems: "center",
-// }}>
-// <p id="dirName"><u>Drink Directory</u></p>
-// </div>
-
-
-
-function Cocktail_Search_Page(){
+function Complete_Drink_List(){
   const [cocktailItems, setCocktails] = useState([]);
 
   function filterIngredients(rawData){
@@ -55,58 +22,6 @@ function Cocktail_Search_Page(){
 
 
 
-
-////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-  function filterDrinks(c){
-    var x, i;
-    x = document.getElementById("SearchContainer");
-    if (c == "Show All") c = " ";
-    for (i = 0; i < x.length; i++){
-      removeClass(x[i], "Show");
-      if (x[i].className.indexOf(c) > -1) addClass(x[i], "Show");
-    }
-  }
-  
-  function addClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.id.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      if (arr1.indexOf(arr2[i]) == -1) {
-        element.id += " " + arr2[i];
-      }
-    }
-  }
-
-  function removeClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.id.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-      while (arr1.indexOf(arr2[i] > -1)) {
-        arr1.splice(arr1.indexOf(arr2[i]), 1);
-      }
-    }
-    element.id = arr1.join(" ");
-    }
-
-
-
-
-
-  ////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
   useEffect(() => {
     axios('https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=')
       .then( (response) => {
@@ -118,20 +33,21 @@ function Cocktail_Search_Page(){
       })
       
   }, [])
-  const onSubmit = e => {
-    e.preventDefault();
+
+
+  function filterDrinks() {
+    axios('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=ordinary_drink')
+    .then( (response) => {
+      filterIngredients(response.data.drinks)
+      setCocktails(response.data.drinks);
+    })
+    .catch( (err) => {
+      console.log(err);
+    })
     
-    let inputDrink = e.currentTarget.previousElementSibling.value;
-    axios.get(`http://localhost:3000/searchpage?search=${inputDrink}`)
-    .then(function (response) {
-      filterIngredients(response.data)
-      setCocktails(response.data);
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-  };
+  }
+
+
 
   return(
     <>
@@ -141,14 +57,15 @@ function Cocktail_Search_Page(){
       </header>
 
       <div id="buttons">
-        <button class="btn">Show All</button>
-        <button class="btn">Alphabetically</button>
+        {/* <button class="btn" onclick={arrayCreation()}>Show All</button> */}
+        <button class="btn" onClick={temp}>Alphabetically</button>
         <button class="btn">Fruity</button>
-        <button class="btn">Other</button>
+        <button class="btn">Holiday</button>
         <button class="btn">Etc.</button>
-
+        
       </div>
-
+      {/* <p>{document.getElementById("SearchContainer").innerHTML = objArray[0].key}</p> */}
+      <p>{objArray[0]}</p>
       <main>
         <div id="SearchContainer">
           {
@@ -160,7 +77,7 @@ function Cocktail_Search_Page(){
                name={item.strDrink}
                image= {item.strDrinkThumb}
                ingredients={item.ingredients}/>
-               {console.log(item)}
+               {/* {console.log(item)} */}
                </>
              ) 
             })
@@ -179,4 +96,4 @@ function Cocktail_Search_Page(){
     
 }
 
-export default Cocktail_Search_Page;
+export default Complete_Drink_List;
