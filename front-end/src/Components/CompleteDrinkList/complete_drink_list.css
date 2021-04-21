@@ -1,3 +1,8 @@
+p {
+  color: navy;
+  text-transform: uppercase;
+}
+
 #dirName {
   color: navy;
   text-transform: uppercase;
