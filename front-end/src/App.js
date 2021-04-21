@@ -23,6 +23,9 @@ import Account_Details_Page from './Components/AccountDetails/account_details'
 import Complete_Drink_List from './Components/CompleteDrinkList/complete_drink_list'
 
 import Cocktail_List from './Components/CocktailList/cocktail_list'
+
+import About_Us from './Components/AboutUs/about_us'
+
 //var hist = createBrowserHistory();
 //history={hist}
 
@@ -40,6 +43,7 @@ function App() {
         <Route path="/login" component={Log_In_Page} />
         <Route path="/register" component={Register_Page} />
         <Route path="/completedrinklist" component={Complete_Drink_List} />
+        <Route path="/aboutus" component={About_Us} />
         {/* <Route path="/search" component={SearchPage} />
         <Route path="/discover" component={DiscoverPage} /> */}
       </Switch>
