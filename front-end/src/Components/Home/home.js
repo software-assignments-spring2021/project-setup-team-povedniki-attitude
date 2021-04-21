@@ -124,7 +124,7 @@ function Home(){
               getOptionLabel={(option) => option}
               style={{ width: 500 }}
               renderInput={(params) => (
-                <TextField {...params} label="Search for Ingredients" variant="filled" />
+                <TextField {...params} label="Search for Ingredients" variant="outlined" />
               )}
             />
             {/* <input
