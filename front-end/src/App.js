@@ -18,6 +18,8 @@ import Cocktail_Search_Page from './Components/CocktailSearch/cocktail_search_pa
 
 import Drink_Recipe_Page from './Components/DrinkRecipe/drink_recipe'
 
+import Random_Drink_Page from './Components/RandomDrink/random_drink'
+
 import Account_Details_Page from './Components/AccountDetails/account_details'
 
 import Complete_Drink_List from './Components/CompleteDrinkList/complete_drink_list'
@@ -37,6 +39,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/searchpage" component={Cocktail_Search_Page} />
         <Route path="/drinkrecipe" component={Drink_Recipe_Page} />
+        <Route path="/randomdrink" component={Random_Drink_Page} />
         <Route path="/accountdetails" component={Account_Details_Page} />
         <Route path="/cocktails" component={Cocktail_List} />
         <Route path="/signin" component={Sign_In_Page} />
