@@ -66,11 +66,9 @@ ul {
  }
 
 #SearchContainer{
-    
+    display: inline-block;
     margin: auto;
     min-height: 500px;
-    
-
 }
 #SearchContainer a{
     text-decoration: none;
