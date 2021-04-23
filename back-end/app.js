@@ -11,13 +11,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-// import mocha and chai
 const bcrypt = require('bcryptjs');
-// const chai = require('chai');
-// const expect = chai.expect; 
-// const mock = require('mock-require');
-// const User = require('./mock-user.js').User;
-// const { assert } = require("console");
 const passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
 require('./db');
