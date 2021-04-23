@@ -36,6 +36,41 @@ app.use(passport.session());
 
 const User = mongoose.model('User');
 
+// register (have to add route still)
+passport.use(new LocalStrategy(
+	function(username, password, done) {
+		
+		//Search for user
+		User.find({where:{email:username}}).success(function(user) {
+
+			//If no user register a new one
+			if (!user) {
+
+				let today = new Date();
+				const salt = today.getTime();
+				const createdDate = today.toUTCString();
+
+			  let newPass = crypto.hashPassword(password, salt);
+
+				let user = User.build({
+					email: username,
+					password: newPass,
+					salt: salt
+				});
+
+				user.save().success(function(savedUser) {
+					console.log('Saved user successfully: %j', savedUser);
+					return done(null, savedUser);
+					
+				}).error(function(error) {
+					console.log(error);
+					return done(null, false, { message: 'Something went wrong in registration' });
+				});
+			}
+		});
+	}
+));
+
 passport.use(new LocalStrategy(
   function(username, password, done) {
     User.findOne({ username: username }, function(err, user) {
