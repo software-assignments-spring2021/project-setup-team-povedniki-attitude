@@ -68,7 +68,7 @@ function Random_Drink(props){
       }
 
       async function fetchData() {
-        let data = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
+        let data = axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
           //filterIngredients(response.data.drinks)
           filterIngredientsMeasure(data.data.drinks)
           setDrinkInfo(data.data.drinks);
