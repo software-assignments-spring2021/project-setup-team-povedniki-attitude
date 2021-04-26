@@ -30,4 +30,4 @@ const UserSchema = new mongoose.Schema({
 mongoose.model('Favorite', FavoritesSchema);
 mongoose.model('User', UserSchema);
 
-mongoose.connect('mongodb://localhost/bottomsup');
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.d6uyu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`);

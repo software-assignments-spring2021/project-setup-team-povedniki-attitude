@@ -1,4 +1,5 @@
 // import and instantiate express
+require('dotenv').config();
 const express = require("express"); // CommonJS import style!
 const app = express(); // instantiate an Express object
 const morgan = require('morgan');
