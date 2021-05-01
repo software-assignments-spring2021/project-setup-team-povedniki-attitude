@@ -6,7 +6,6 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 
 function LogIn(){
-
   return(
     <>
       <div id='pageContainer'>
@@ -16,6 +15,7 @@ function LogIn(){
         </div>
         <main>
             <div className="sign-in-container">
+            <form method ="POST" action = "">
                 <div class="field-container">
                     <div class="field-label">Email</div>
                     <input class="sign-in-field" id="emailField" type="text"></input>
@@ -24,8 +24,11 @@ function LogIn(){
                     <div class="field-label">Password</div>
                     <input class="sign-in-field" id="pwdField" type="password"></input>
                 </div>
-                <div className="sign-in-button mini">Sign In</div>
+                <div className="sign-in-button mini">Sign In
+                <input class= "sign-in-footer" type ="submit"></input>
+                </div>
                 <div class="sign-in-footer">Don't have an account? <a href="./register">Register here</a></div>
+                </form>
             </div>
         </main>
         <footer>
