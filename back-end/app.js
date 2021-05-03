@@ -13,6 +13,7 @@ const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
+const auth = require('./auth.js');
 const passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
 require('./db');
@@ -133,10 +134,15 @@ app.post('/login',
 
 
 app.post("/register", cors(), (req, res) => {
-  console.log(req.body);
-  res.send({response: "success post", })
+  auth.register(req.body.username, req.body.name, req.body.password, (message) => {
+    // error callback
+    res.redirect('/register');
+  }, () => {
+      // success callback
+      res.redirect('/login');
+  });
+})
 
-  })
 
 
 
