@@ -13,6 +13,7 @@ const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const bcrypt = require('bcryptjs');
+const auth = require('./auth.js');
 const passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
 require('./db');
@@ -94,50 +95,14 @@ app.post('/login',
 
 //still need to fix up passport.use because its not goint through that function
 app.post("/register", cors(), (req, res) => {
-  console.log(req.body)
-  res.send({response: "success post", })
-
-  passport.use(new LocalStrategy({
-    usernameField: req.body.email,
-    passwordField: req.body.password,
-    session: false
-  },
-    function(username, password, done) {
-      console.log(username + password)
-      //Search for user
-      User.findOne({where:{email:username}}).success(function(user) {
-        console.log(user)
-        //If no user register a new one
-        if (!user) {
-  
-          let today = new Date();
-          const salt = today.getTime();
-          const createdDate = today.toUTCString();
-  
-          let newPass = crypto.hashPassword(password, salt);
-  
-          let user = User.build({
-            email: username,
-            password: newPass,
-            salt: salt
-          });
-  
-          user.save().success(function(savedUser) {
-            console.log('Saved user successfully: %j', savedUser);
-            return done(null, savedUser);
-            
-          }).error(function(error) {
-            console.log(error);
-            return done(null, false, { message: 'Something went wrong in registration' });
-          });
-        }
-      });
-    }
-  ));
-
-
-
-  })
+  auth.register(req.body.username, req.body.name, req.body.password, (message) => {
+    // error callback
+    res.redirect('/register');
+  }, () => {
+      // success callback
+      res.redirect('/login');
+  });
+})
 
 
 
