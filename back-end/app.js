@@ -49,59 +49,13 @@ passport.use(new LocalStrategy(
     });
   }
 ));
-passport.serializeUser(function(user, done) {
-    done(null, user.id);
-});
-passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-        done(err, user);
-    });
-});
 
-app.post('/', (req, res) => {
-    console.log(req.body);
-    res.status(200).json(req.body);
-});
-
-app.get('/searchpage', cors(), (req, res) => { 
-    let drink = req.query.search;
-    axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
-    //axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=martini`)
-        .then(function (response) {
-            //console.log(response);
-            console.log(response.data);
-            res.status(200).json(response.data.drinks);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });    
-});
-
-app.get('/signin', (req, res) => {
-    if (req.user) {
-        res.redirect('/accountdetails');
-    }
-    else {
-        res.status(200).json();
-    }
-});
-
-app.post('/login',
-    passport.authenticate('local', { successRedirect: '/home',
-                                    failureRedirect: '/login',
-                                    })
-);
-
-//still need to fix up passport.use because its not goint through that function
-app.post("/register", cors(), (req, res) => {
-  console.log(req.body)
-  res.send({response: "success post", })
-
-  passport.use(new LocalStrategy({
-    usernameField: req.body.email,
-    passwordField: req.body.password,
-    session: false
-  },
+passport.use(new LocalStrategy(
+  // {
+  //   usernameField: req.body.email,
+  //   passwordField: req.body.password,
+  //   session: false
+  // },
     function(username, password, done) {
       console.log(username + password)
       //Search for user
@@ -136,6 +90,55 @@ app.post("/register", cors(), (req, res) => {
   ));
 
 
+
+
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });
+});
+
+app.post('/', (req, res) => {
+    console.log(req.body);
+    res.status(200).json(req.body);
+});
+
+app.get('/searchpage', cors(), (req, res) => { 
+    let drink = req.query.search;
+    axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
+    //axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=martini`)
+        .then(function (response) {
+            //console.log(response);
+            console.log(response.data);
+            res.status(200).json(response.data.drinks);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });    
+});
+
+app.get('/signin', cors(), (req, res) => {
+    if (req.user) {
+        res.redirect('/accountdetails');
+    }
+    else {
+        res.status(200).json();
+    }
+});
+
+app.post('/login',
+    passport.authenticate('local', { successRedirect: '/home',
+                                    failureRedirect: '/login',
+                                    })
+);
+
+
+app.post("/register", cors(), (req, res) => {
+  console.log(req.body);
+  res.send({response: "success post", })
 
   })
 
