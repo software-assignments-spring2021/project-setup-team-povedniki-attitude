@@ -50,44 +50,40 @@ passport.use(new LocalStrategy(
   }
 ));
 
-passport.use(new LocalStrategy(
-  // {
-  //   usernameField: req.body.email,
-  //   passwordField: req.body.password,
-  //   session: false
-  // },
-    function(username, password, done) {
-      console.log(username + password)
-      //Search for user
-      User.findOne({where:{email:username}}).success(function(user) {
-        console.log(user)
-        //If no user register a new one
-        if (!user) {
+// passport.use(new LocalStrategy(
   
-          let today = new Date();
-          const salt = today.getTime();
-          const createdDate = today.toUTCString();
+//     function(username, password, done) {
+//       console.log(username + password)
+//       //Search for user
+//       User.findOne({where:{email:username}}).success(function(user) {
+//         console.log(user)
+//         //If no user register a new one
+//         if (!user) {
   
-          let newPass = crypto.hashPassword(password, salt);
+//           let today = new Date();
+//           const salt = today.getTime();
+//           const createdDate = today.toUTCString();
   
-          let user = User.build({
-            email: username,
-            password: newPass,
-            salt: salt
-          });
+//           let newPass = crypto.hashPassword(password, salt);
   
-          user.save().success(function(savedUser) {
-            console.log('Saved user successfully: %j', savedUser);
-            return done(null, savedUser);
+//           let user = User.build({
+//             email: username,
+//             password: newPass,
+//             salt: salt
+//           });
+  
+//           user.save().success(function(savedUser) {
+//             console.log('Saved user successfully: %j', savedUser);
+//             return done(null, savedUser);
             
-          }).error(function(error) {
-            console.log(error);
-            return done(null, false, { message: 'Something went wrong in registration' });
-          });
-        }
-      });
-    }
-  ));
+//           }).error(function(error) {
+//             console.log(error);
+//             return done(null, false, { message: 'Something went wrong in registration' });
+//           });
+//         }
+//       });
+//     }
+//   ));
 
 
 
@@ -129,10 +125,10 @@ app.get('/signin', cors(), (req, res) => {
     }
 });
 
-app.post('/login',
+app.post('/login', 
     passport.authenticate('local', { successRedirect: '/home',
-                                    failureRedirect: '/login',
-                                    })
+                                    failureRedirect: "http://localhost:3001/login",
+                                    })            
 );
 
 
