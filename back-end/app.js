@@ -50,6 +50,45 @@ passport.use(new LocalStrategy(
     });
   }
 ));
+
+// passport.use(new LocalStrategy(
+  
+//     function(username, password, done) {
+//       console.log(username + password)
+//       //Search for user
+//       User.findOne({where:{email:username}}).success(function(user) {
+//         console.log(user)
+//         //If no user register a new one
+//         if (!user) {
+  
+//           let today = new Date();
+//           const salt = today.getTime();
+//           const createdDate = today.toUTCString();
+  
+//           let newPass = crypto.hashPassword(password, salt);
+  
+//           let user = User.build({
+//             email: username,
+//             password: newPass,
+//             salt: salt
+//           });
+  
+//           user.save().success(function(savedUser) {
+//             console.log('Saved user successfully: %j', savedUser);
+//             return done(null, savedUser);
+            
+//           }).error(function(error) {
+//             console.log(error);
+//             return done(null, false, { message: 'Something went wrong in registration' });
+//           });
+//         }
+//       });
+//     }
+//   ));
+
+
+
+
 passport.serializeUser(function(user, done) {
     done(null, user.id);
 });
@@ -78,7 +117,7 @@ app.get('/searchpage', cors(), (req, res) => {
         });    
 });
 
-app.get('/signin', (req, res) => {
+app.get('/signin', cors(), (req, res) => {
     if (req.user) {
         res.redirect('/accountdetails');
     }
@@ -87,13 +126,13 @@ app.get('/signin', (req, res) => {
     }
 });
 
-app.post('/login',
+app.post('/login', 
     passport.authenticate('local', { successRedirect: '/home',
-                                    failureRedirect: '/login',
-                                    })
+                                    failureRedirect: "http://localhost:3001/login",
+                                    })            
 );
 
-//still need to fix up passport.use because its not goint through that function
+
 app.post("/register", cors(), (req, res) => {
   auth.register(req.body.username, req.body.name, req.body.password, (message) => {
     // error callback
@@ -103,6 +142,7 @@ app.post("/register", cors(), (req, res) => {
       res.redirect('/login');
   });
 })
+
 
 
 
