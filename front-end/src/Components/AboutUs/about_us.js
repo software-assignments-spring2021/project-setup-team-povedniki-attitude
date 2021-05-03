@@ -20,11 +20,15 @@ function AboutUs(){
             <div class="col s12 m6">
               <div class="card">
                 <div class="card-image">
-                  <img src={"/img/Diego.png"} alt="Cannot Display" class="first_image" />
-                  <span class="card-title ">Diego Mendoza</span>
+                  <img src={"/img/Diego.jpg"} alt="Cannot Display" class="first_image" />
+                  <span class="card-title">Diego Mendoza</span>
                 </div>
                 <div class="card-content">
-                  <h5>Diego Mendoza did this.</h5>
+                  <h4 class="spacing">He is a senior majoring in Finance and Computer Science. He built the about us page and the front end of the cocktail list page.
+                  </h4>
+                  <h4>
+                    Favorite Drink: Gin and Tonic
+                  </h4>
                 </div>
               </div>
             </div>
@@ -32,10 +36,16 @@ function AboutUs(){
               <div class="card">
                 <div class="card-image">
                   <img src={"/img/Dhruv.jpeg"} alt = "Cannot Display" class="first_image"/>
-                  <span class="card-title ">Dhruv Shetty</span>
+                  <span class="card-title">Dhruv Shetty</span>
                 </div>
                 <div class="card-content">
-                  <h5>Diego Mendoza did this.</h5>
+                  <h4 class="spacing">
+                    He is senior at the Stern School of Business majoring in Finance and Computer Science. 
+                    He built the account details, drink directory, and filter pages.
+                  </h4>
+                  <h4>
+                    Favorite Drink: Moscow Mule
+                  </h4>
                 </div>
               </div>
             </div>
@@ -45,10 +55,10 @@ function AboutUs(){
               <div class="card">
                 <div class="card-image">
                   <img src={"/img/Charles.jpeg"} alt = "Cannot Display" class="first_image"/>
-                  <span class="card-title ">Charles Condon</span>
+                  <span class="card-title" text = "black">Charles Condon</span>
                 </div>
                 <div class="card-content">
-                  <h5>Diego Mendoza did this.</h5>
+                  <h4 class="spacing">Diego Mendoza did this.</h4>
                 </div>
               </div>
             </div>
@@ -59,7 +69,7 @@ function AboutUs(){
                   <span class="card-title ">Humza Khan</span>
                 </div>
                 <div class="card-content">
-                  <h5>Diego Mendoza did this.</h5>
+                  <h4 class="spacing">Diego Mendoza did this.</h4>
                 </div>
               </div>
             </div>
@@ -69,10 +79,10 @@ function AboutUs(){
               <div class="card">
                 <div class="card-image">
                   <img src={"/img/Maria.jpeg"} alt = "Cannot Display" class="first_image"/>
-                  <span class="card-title ">Maria Hatzioanidis</span>
+                  <span class="card-title">Maria Hatzioanidis</span>
                 </div>
                 <div class="card-content">
-                  <h5>Diego Mendoza did this.</h5>
+                  <h4 class="spacing">Diego Mendoza did this.</h4>
                 </div>
               </div>
             </div>
@@ -85,7 +95,10 @@ function AboutUs(){
                   <span class="card-title ">Maneesh Karnati</span>
                 </div>
                 <div class="card-content">
-                  <h5></h5>
+                  <h4 class="spacing">He is a senior at NYU Stern, and he is a Finance and Computer Science major. 
+                  For this project, he was responsible for the individual drink pages as well as the randomized drink feature. 
+                  </h4>
+                  <h4>Favorite Drink: Michelob Ultra Pure Gold</h4>
                 </div>
               </div>
             </div>
