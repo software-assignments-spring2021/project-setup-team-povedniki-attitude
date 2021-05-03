@@ -38,6 +38,7 @@ const chai = require('chai');
 const expect = chai.expect; 
 const mock = require('mock-require');
 const User = require('./mock-user.js').User;
+const axios = require("axios");
 
 mock('mongoose', { 
   model() {
@@ -66,8 +67,10 @@ describe("cocktail search",function(){
             axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
             .then(function (response) {
                 resp = response.data.drinks[0]
+                expect(response.drinks[0].strDrink).to.equal("Martini");
             });
-            assert.equal("Martini",response.drinks[0].strDrink);
+            // assert.equal("Martini",response.drinks[0].strDrink);
+            
         });
     });
 
@@ -77,9 +80,11 @@ describe("cocktail search",function(){
             let resp = {};
             axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
             .then(function (response) {
-                resp = response.data.drinks[0]
+                resp = response.data.drinks[0];
+                expect(response.drinks).to.equal(null);
             });
-            assert.equal(null,response.drinks);
+            // assert.equal(null,response.drinks);
+            
         });
     });
 });
