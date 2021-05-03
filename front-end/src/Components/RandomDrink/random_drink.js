@@ -68,10 +68,11 @@ function Random_Drink(props){
       }
 
       async function fetchData() {
-        let data = axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
+        let data = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
           //filterIngredients(response.data.drinks)
           filterIngredientsMeasure(data.data.drinks)
           setDrinkInfo(data.data.drinks);
+          
           console.log(data.data)
         }
       
@@ -98,20 +99,20 @@ function Random_Drink(props){
         </header>
         
         <main>
-            {/* <div className = "drinkInfo">
-                <img id = "Drink-Image" src={drinkInfo[0].strDrinkThumb}/>
-                <h2 id = "Drink-Name">{drinkInfo[0].strDrink}</h2>
+            <div className = "drinkInfo">
+                <img id = "Drink-Image" src={drinkInfo[0]?.strDrinkThumb}/>
+                <h2 id = "Drink-Name">{drinkInfo[0]?.strDrink}</h2>
             </div>
 
             <div className="recContainer">
                 <p id = "Drink-Rec">
-                    <h4>Glass Recommended:</h4> {drinkInfo[0].strGlass}
-                    <h4>Description/Instructions:</h4> {drinkInfo[0].strInstructions}
-                    <h4>Ingredients:</h4> {drinkInfo[0].ingredientsMeasure}
+                    <h4>Glass Recommended:</h4> {drinkInfo[0]?.strGlass}
+                    <h4>Description/Instructions:</h4> {drinkInfo[0]?.strInstructions}
+                    <h4>Ingredients:</h4> {drinkInfo[0]?.ingredientsMeasure}
                     <div>
                     <ul>
                         {
-                            drinkInfo[0].ingredientsMeasure.map((item) => {
+                            drinkInfo[0]?.ingredientsMeasure.map((item) => {
                                 return(
                                     <li>{item}</li>
                                 )
@@ -122,7 +123,7 @@ function Random_Drink(props){
                      
                     
                 </p>
-            </div> */}
+            </div>
             
             <div className = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
