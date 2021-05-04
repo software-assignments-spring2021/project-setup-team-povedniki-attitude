@@ -34,7 +34,7 @@ function LogIn(){
             <form method="POST" action="http://localhost:3000/login" >
                 <div class="field-container">
                     <div class="field-label">Email</div>
-                    <input class="sign-in-field" id="emailField" type="text" name = "email" onChange={e => setEmail(e.target.value)}></input>
+                    <input class="sign-in-field" id="emailField" type="text" name = "username" onChange={e => setEmail(e.target.value)}></input>
                 </div>
                 <div class="field-container">
                     <div class="field-label">Password</div>

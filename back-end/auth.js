@@ -4,13 +4,13 @@ require('./db');
 
 const User = mongoose.model('User');
 
-function register(username, name, password, errorCallback, successCallback) {
-    if (username.length < 8 || password.length < 8) {
+function register(email, name, password, errorCallback, successCallback) {
+    if (password.length < 8) {
         console.log('username or password too short');
         errorCallback( {message: 'USERNAME PASSWORD TOO SHORT'} );
     }
     else {
-        User.findOne( {username: username}, (err, result, count) => {
+        User.findOne( {username: email}, (err, result, count) => {
             if (result) {
                 console.log('username already exists');
                 errorCallback( {message: 'USERNAME ALREADY EXISTS'} );
@@ -18,7 +18,7 @@ function register(username, name, password, errorCallback, successCallback) {
             else {
                 bcrypt.hash(password, 10, function(err, hash) {
                     new User({
-                        username: username,
+                        username: email,
                         name: name,
                         password: hash
                     }).save( function(err, user, count) {

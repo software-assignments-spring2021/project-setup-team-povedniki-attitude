@@ -118,7 +118,9 @@ app.get('/searchpage', cors(), (req, res) => {
 });
 
 app.get('/signin', cors(), (req, res) => {
+  console.log(req.user);
     if (req.user) {
+      console.log(req.user);
         res.redirect('/accountdetails');
     }
     else {
@@ -127,19 +129,19 @@ app.get('/signin', cors(), (req, res) => {
 });
 
 app.post('/login', 
-    passport.authenticate('local', { successRedirect: '/home',
+    passport.authenticate('local', { successRedirect: 'http://localhost:3001',
                                     failureRedirect: "http://localhost:3001/login",
                                     })            
 );
 
 
 app.post("/register", cors(), (req, res) => {
-  auth.register(req.body.username, req.body.name, req.body.password, (message) => {
+  auth.register(req.body.email, req.body.name, req.body.password, (message) => {
     // error callback
-    res.redirect('/register');
+    res.redirect('http://localhost:3001/register');
   }, () => {
       // success callback
-      res.redirect('/login');
+      res.redirect('http://localhost:3001/login');
   });
 })
 
