@@ -46,10 +46,11 @@ function Drink_Recipe(props){
                     <h4>Glass Recommended:</h4> {drinkInfo.glass}
                     <h4>Description/Instructions:</h4> {drinkInfo.instructions}
                     <h4>Ingredients:</h4> {drinkInfo.ingredientsMeasure}
+                    <h4>Ingredients:</h4>
                     {/* <div>
                     <ul>
                         {
-                            drinkInfo.ingredientsMeasure.map((item) => {
+                            drinkInfo?.ingredientsMeasure.map((item) => {
                                 return(
                                     <li>{item}</li>
                                 )
