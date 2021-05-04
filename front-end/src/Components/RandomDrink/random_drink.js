@@ -106,9 +106,9 @@ function Random_Drink(props){
 
             <div className="recContainer">
                 <p id = "Drink-Rec">
-                    <h4>Glass Recommended:</h4> {drinkInfo[0]?.strGlass}
-                    <h4>Description/Instructions:</h4> {drinkInfo[0]?.strInstructions}
-                    <h4>Ingredients:</h4> {drinkInfo[0]?.ingredientsMeasure}
+                    <h4 id = "Glass">Glass Recommended:</h4>{drinkInfo[0]?.strGlass}
+                    <h4 id = "Instructions">Description/Instructions:</h4>{drinkInfo[0]?.strInstructions}
+                    <h4 id = "Ingredients">Ingredients:</h4> 
                     <div>
                     <ul>
                         {
