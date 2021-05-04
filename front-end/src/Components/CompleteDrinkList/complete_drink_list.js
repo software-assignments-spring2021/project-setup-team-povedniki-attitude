@@ -50,6 +50,7 @@ function Complete_Drink_List(){
       .catch( (err) => {
         console.log(err);
       })
+      console.log(click_id.target.id);
   }
 
 
@@ -131,97 +132,97 @@ function Complete_Drink_List(){
           <a href="#scotch" id="i=scotch"  onClick={filterDrinks}>Scotch</a>
           <a href="#apricot_brandy" id="i=apricot_brandy"  onClick={filterDrinks}>Apricot Brandy</a>
           <a href="#triple_sec" id="i=triple_sec"  onClick={filterDrinks}>Triple Sec</a>
-          <a href="#53" id="i=southern_comfort"  onClick={filterDrinks}>Southern Comfort</a>
-          <a href="#54" id="i=orange_bitters"  onClick={filterDrinks}>Orange Bitters</a>
-          <a href="#55" id="i=brandy"  onClick={filterDrinks}>Brandy</a>
-          <a href="#56" id="i=lemon_vodka"  onClick={filterDrinks}>Lemon Vodka</a>
-          <a href="#57" id="i=blended_whiskey"  onClick={filterDrinks}>Blended Whiskey</a>
-          <a href="#58" id="i=dry_vermouth"  onClick={filterDrinks}>Dry Vermouth</a>
-          <a href="#59" id="i=amaretto"  onClick={filterDrinks}>Amaretto</a>
-          <a href="#60" id="i=tea"  onClick={filterDrinks}>Tea</a>
-          <a href="#61" id="i=champagne"  onClick={filterDrinks}>Champagne</a>
-          <a href="#62" id="i=coffee_liqueur"  onClick={filterDrinks}>Coffee Liqueur</a>
-          <a href="#63" id="i=bourbon"  onClick={filterDrinks}>Bourbon</a>
-          <a href="#64" id="i=tequila"  onClick={filterDrinks}>Tequila</a>
-          <a href="#65" id="i=vodka"  onClick={filterDrinks}>Vodka</a>
-          <a href="#66" id="i=anejo_rum"  onClick={filterDrinks}>Añejo Rum</a>
-          <a href="#67" id="i=bitters"  onClick={filterDrinks}>Bitters</a>
-          <a href="#68" id="i=sugar"  onClick={filterDrinks}>Sugar</a>
-          <a href="#69" id="i=kahlua"  onClick={filterDrinks}>Kahlua</a>
-          <a href="#70" id="i=demerara_sugar"  onClick={filterDrinks}>Demerara Sugar</a>
-          <a href="#71" id="i=dubonnet_rouge"  onClick={filterDrinks}>Dubonnet Rouge</a>
-          <a href="#72" id="i=watermelon"  onClick={filterDrinks}>Watermelon</a>
-          <a href="73" id="i=lime_juice"  onClick={filterDrinks}>Lime Juice</a>
-          <a href="#74" id="i=irish_whiskey"  onClick={filterDrinks}>Irish Whiskey</a>
-          <a href="#75" id="i=apple_brandy"  onClick={filterDrinks}>Apple Brandy</a>
-          <a href="#76" id="i=carbonated_water"  onClick={filterDrinks}>Carbonated Water</a>
-          <a href="#77" id="i=cherry_brandy"  onClick={filterDrinks}>Cherry Brandy</a>
-          <a href="#78" id="i=creme_de_cacao"  onClick={filterDrinks}>Creme de Cacao</a>
-          <a href="#79" id="i=grenadine"  onClick={filterDrinks}>Grenadine</a>
-          <a href="#80" id="i=port"  onClick={filterDrinks}>Port</a>
-          <a href="#81" id="i=coffee_brandy"  onClick={filterDrinks}>Coffee Brandy</a>
-          <a href="#82" id="i=red_wine"  onClick={filterDrinks}>Red Wine</a>
-          <a href="#83" id="i=rum"  onClick={filterDrinks}>Rum</a>
-          <a href="#84" id="i=grapefruit_juice"  onClick={filterDrinks}>Grapefruit Juice</a>
-          <a href="#85" id="i=ricard"  onClick={filterDrinks}>Ricard</a>
-          <a href="#86" id="i=sherry"  onClick={filterDrinks}>Sherry</a>
-          <a href="#87" id="i=cognac"  onClick={filterDrinks}>Cognac</a>
-          <a href="#88" id="i=sloe_gin"  onClick={filterDrinks}>Sloe Gin</a>
-          <a href="#89" id="i=apple_juice"  onClick={filterDrinks}>Apple Juice</a>
-          <a href="#90" id="i=pineapple_juice"  onClick={filterDrinks}>Pineapple Juice</a>
-          <a href="#91" id="i=lemon_juice"  onClick={filterDrinks}>Lemon Juice</a>
-          <a href="#92" id="i=sugar_syrup"  onClick={filterDrinks}>Sugar Syrup</a>
-          <a href="#93" id="i=milk"  onClick={filterDrinks}>Milk</a>
-          <a href="#94" id="i=strawberries"  onClick={filterDrinks}>Strawberries</a>
-          <a href="#95" id="i=cocolate_syrup"  onClick={filterDrinks}>Chocolate Syrup</a>
-          <a href="#96" id="i=yoghurt"  onClick={filterDrinks}>Yoghurt</a>
-          <a href="#97" id="i=mango"  onClick={filterDrinks}>Mango</a>
-          <a href="#98" id="i=ginger"  onClick={filterDrinks}>Ginger</a>
-          <a href="#99" id="i=lime"  onClick={filterDrinks}>Lime</a>
-          <a href="#100" id="i=cantaloupe"  onClick={filterDrinks}>Cantaloupe</a>
-          <a href="#101" id="i=berries"  onClick={filterDrinks}>Berries</a>
-          <a href="#102" id="i=grapes"  onClick={filterDrinks}>Grapes</a>
-          <a href="#103" id="i=kiwi"  onClick={filterDrinks}>Kiwi</a>
-          <a href="#104" id="i=tomato_juice"  onClick={filterDrinks}>Tomato Juice</a>
-          <a href="#105" id="i=cocoa_powder"  onClick={filterDrinks}>Cocoa Powder</a>
-          <a href="#106" id="i=chocolate"  onClick={filterDrinks}>Chocolate</a>
-          <a href="#107" id="i=heavy_cream"  onClick={filterDrinks}>Heavy Cream</a>
-          <a href="#108" id="i=galliano"  onClick={filterDrinks}>Galliano</a>
-          <a href="#109" id="i=peach_vodka"  onClick={filterDrinks}>Peach Vodka</a>
-          <a href="#110" id="i=ouzo"  onClick={filterDrinks}>Ouzo</a>
-          <a href="#111" id="i=coffee"  onClick={filterDrinks}>Coffee</a>
-          <a href="#112" id="i=spiced_rum"  onClick={filterDrinks}>Spiced Rum</a>
-          <a href="#113" id="i=water"  onClick={filterDrinks}>Water</a>
-          <a href="#114" id="i=espresso"  onClick={filterDrinks}>Espresso</a>
-          <a href="#115" id="i=angelica_root"  onClick={filterDrinks}>Angelica Root</a>
-          <a href="#116" id="i=orange"  onClick={filterDrinks}>Orange</a>
-          <a href="#117" id="i=cranberries"  onClick={filterDrinks}>Cranberries</a>
-          <a href="#118" id="i=johnnie_walker"  onClick={filterDrinks}>Johnnie Walker</a>
-          <a href="#119" id="i=apple_cider"  onClick={filterDrinks}>Apple Cider</a>
-          <a href="#120" id="i=everclear"  onClick={filterDrinks}>Everclear</a>
-          <a href="#121" id="i=cranberry_juice"  onClick={filterDrinks}>Cranberry Juice</a>
-          <a href="#122" id="i=egg_yolk"  onClick={filterDrinks}>Egg yolk</a>
-          <a href="#123" id="i=egg"  onClick={filterDrinks}>Egg</a>
-          <a href="#124" id="i=grape_juice"  onClick={filterDrinks}>Grape Juice</a>
-          <a href="#125" id="i=peach_nectar"  onClick={filterDrinks}>Peach Nectar</a>
-          <a href="#126" id="i=lemon"  onClick={filterDrinks}>Lemon</a>
-          <a href="#127" id="i=firewater"  onClick={filterDrinks}>Firewater</a>
-          <a href="#128" id="i=lemonade"  onClick={filterDrinks}>Lemonade</a>
-          <a href="#129" id="i=lager"  onClick={filterDrinks}>Lager</a>
-          <a href="#130" id="i=whiskey"  onClick={filterDrinks}>Whiskey</a>
-          <a href="#131" id="i=absolut_citron"  onClick={filterDrinks}>Absolut Citron</a>
-          <a href="#132" id="i=pisco"  onClick={filterDrinks}>Pisco</a>
-          <a href="#134" id="i=irish_cream"  onClick={filterDrinks}>Irish Cream</a>
-          <a href="#135" id="i=ale"  onClick={filterDrinks}>Ale</a>
-          <a href="#136" id="i=chocolate_liqueur"  onClick={filterDrinks}>Chocolate Liqueur</a>
-          <a href="#137" id="i=midori_melon_liqueur"  onClick={filterDrinks}>Midori Melon Liqueur</a>
-          <a href="#138" id="i=sambuca"  onClick={filterDrinks}>Sambuca</a>
-          <a href="#139" id="i=cider"  onClick={filterDrinks}>Cider</a>
-          <a href="#140" id="i=sprite"  onClick={filterDrinks}>Sprite</a>
-          <a href="#141" id="i=7_up"  onClick={filterDrinks}>7-Up</a>
-          <a href="#142" id="i=blackberry_brandy"  onClick={filterDrinks}>Blackberry Brandy</a>
-          <a href="#143" id="i=peppermint_schnapps"  onClick={filterDrinks}>Peppermint Schnapps</a>
-          <a href="#144" id="i=creme_de_cassis"  onClick={filterDrinks}>Creme de Cassis</a>
+          <a href="#southern_comfort" id="i=southern_comfort"  onClick={filterDrinks}>Southern Comfort</a>
+          <a href="#orange_bitters" id="i=orange_bitters"  onClick={filterDrinks}>Orange Bitters</a>
+          <a href="#brandy" id="i=brandy"  onClick={filterDrinks}>Brandy</a>
+          <a href="#lemon_vodka" id="i=lemon_vodka"  onClick={filterDrinks}>Lemon Vodka</a>
+          <a href="#blended_whiskey" id="i=blended_whiskey"  onClick={filterDrinks}>Blended Whiskey</a>
+          <a href="#dry_vermouth" id="i=dry_vermouth"  onClick={filterDrinks}>Dry Vermouth</a>
+          <a href="#amaretto" id="i=amaretto"  onClick={filterDrinks}>Amaretto</a>
+          <a href="#tea" id="i=tea"  onClick={filterDrinks}>Tea</a>
+          <a href="#champagne" id="i=champagne"  onClick={filterDrinks}>Champagne</a>
+          <a href="#coffee_liqueur" id="i=coffee_liqueur"  onClick={filterDrinks}>Coffee Liqueur</a>
+          <a href="#bourbon" id="i=bourbon"  onClick={filterDrinks}>Bourbon</a>
+          <a href="#tequila" id="i=tequila"  onClick={filterDrinks}>Tequila</a>
+          <a href="#vodka" id="i=vodka"  onClick={filterDrinks}>Vodka</a>
+          <a href="#anejo_rum" id="i=anejo_rum"  onClick={filterDrinks}>Añejo Rum</a>
+          <a href="#bitters" id="i=bitters"  onClick={filterDrinks}>Bitters</a>
+          <a href="#sugar" id="i=sugar"  onClick={filterDrinks}>Sugar</a>
+          <a href="#kahlua" id="i=kahlua"  onClick={filterDrinks}>Kahlua</a>
+          <a href="#demerara_sugar" id="i=demerara_sugar"  onClick={filterDrinks}>Demerara Sugar</a>
+          <a href="#dubonnet_rouge" id="i=dubonnet_rouge"  onClick={filterDrinks}>Dubonnet Rouge</a>
+          <a href="#watermelon" id="i=watermelon"  onClick={filterDrinks}>Watermelon</a>
+          <a href="#lime_juice" id="i=Lime juice"  onClick={filterDrinks}>Lime Juice</a>
+          <a href="#irish_whiskey" id="i=irish_whiskey"  onClick={filterDrinks}>Irish Whiskey</a>
+          <a href="#apple_brandy" id="i=apple_brandy"  onClick={filterDrinks}>Apple Brandy</a>
+          <a href="#carbonated_water" id="i=carbonated_water"  onClick={filterDrinks}>Carbonated Water</a>
+          <a href="#cherry_brandy" id="i=cherry_brandy"  onClick={filterDrinks}>Cherry Brandy</a>
+          <a href="#creme_de_cacao" id="i=creme_de_cacao"  onClick={filterDrinks}>Creme de Cacao</a>
+          <a href="#grenadine" id="i=grenadine"  onClick={filterDrinks}>Grenadine</a>
+          <a href="#port" id="i=port"  onClick={filterDrinks}>Port</a>
+          <a href="#coffee_brandy" id="i=coffee_brandy"  onClick={filterDrinks}>Coffee Brandy</a>
+          <a href="#red_wine" id="i=red_wine"  onClick={filterDrinks}>Red Wine</a>
+          <a href="#rum" id="i=rum"  onClick={filterDrinks}>Rum</a>
+          <a href="#grapefruit_juice" id="i=grapefruit_juice"  onClick={filterDrinks}>Grapefruit Juice</a>
+          <a href="#ricard" id="i=ricard"  onClick={filterDrinks}>Ricard</a>
+          <a href="#sherry" id="i=sherry"  onClick={filterDrinks}>Sherry</a>
+          <a href="#cognac" id="i=cognac"  onClick={filterDrinks}>Cognac</a>
+          <a href="#sloe_gin" id="i=sloe_gin"  onClick={filterDrinks}>Sloe Gin</a>
+          <a href="#apple_juice" id="i=apple_juice"  onClick={filterDrinks}>Apple Juice</a>
+          <a href="#pineapple_juice" id="i=pineapple_juice"  onClick={filterDrinks}>Pineapple Juice</a>
+          <a href="#lemon_juice" id="i=lemon_juice"  onClick={filterDrinks}>Lemon Juice</a>
+          <a href="#sugar_syrup" id="i=sugar_syrup"  onClick={filterDrinks}>Sugar Syrup</a>
+          <a href="#milk" id="i=milk"  onClick={filterDrinks}>Milk</a>
+          <a href="#strawberries" id="i=strawberries"  onClick={filterDrinks}>Strawberries</a>
+          <a href="#cocolate_syrup" id="i=chocolate_syrup"  onClick={filterDrinks}>Chocolate Syrup</a>
+          <a href="#yoghurt" id="i=yoghurt"  onClick={filterDrinks}>Yoghurt</a>
+          <a href="#mango" id="i=mango"  onClick={filterDrinks}>Mango</a>
+          <a href="#ginger" id="i=ginger"  onClick={filterDrinks}>Ginger</a>
+          <a href="#lime" id="i=lime"  onClick={filterDrinks}>Lime</a>
+          <a href="#cantaloupe" id="i=cantaloupe"  onClick={filterDrinks}>Cantaloupe</a>
+          <a href="#berries" id="i=berries"  onClick={filterDrinks}>Berries</a>
+          <a href="#grapes" id="i=grapes"  onClick={filterDrinks}>Grapes</a>
+          <a href="#kiwi" id="i=kiwi"  onClick={filterDrinks}>Kiwi</a>
+          <a href="#tomato_juice" id="i=tomato_juice"  onClick={filterDrinks}>Tomato Juice</a>
+          <a href="#cocoa_powder" id="i=cocoa_powder"  onClick={filterDrinks}>Cocoa Powder</a>
+          <a href="#chocolate" id="i=chocolate"  onClick={filterDrinks}>Chocolate</a>
+          <a href="#heavy_cream" id="i=heavy_cream"  onClick={filterDrinks}>Heavy Cream</a>
+          <a href="#galliano" id="i=galliano"  onClick={filterDrinks}>Galliano</a>
+          <a href="#peach_vodka" id="i=peach_vodka"  onClick={filterDrinks}>Peach Vodka</a>
+          <a href="#ouzo" id="i=ouzo"  onClick={filterDrinks}>Ouzo</a>
+          <a href="#coffee" id="i=coffee"  onClick={filterDrinks}>Coffee</a>
+          <a href="#spiced_rum" id="i=spiced_rum"  onClick={filterDrinks}>Spiced Rum</a>
+          <a href="#water" id="i=water"  onClick={filterDrinks}>Water</a>
+          <a href="#espresso" id="i=espresso"  onClick={filterDrinks}>Espresso</a>
+          <a href="#angelica_root" id="i=angelica_root"  onClick={filterDrinks}>Angelica Root</a>
+          <a href="#orange" id="i=orange"  onClick={filterDrinks}>Orange</a>
+          <a href="#cranberries" id="i=cranberries"  onClick={filterDrinks}>Cranberries</a>
+          <a href="#johnnie_walker" id="i=johnnie_walker"  onClick={filterDrinks}>Johnnie Walker</a>
+          <a href="#apple_cider" id="i=apple_cider"  onClick={filterDrinks}>Apple Cider</a>
+          <a href="#everclear" id="i=everclear"  onClick={filterDrinks}>Everclear</a>
+          <a href="#cranberry_juice" id="i=cranberry_juice"  onClick={filterDrinks}>Cranberry Juice</a>
+          <a href="#egg_yolk" id="i=egg_yolk"  onClick={filterDrinks}>Egg yolk</a>
+          <a href="#egg" id="i=egg"  onClick={filterDrinks}>Egg</a>
+          <a href="#grape_juice" id="i=grape_juice"  onClick={filterDrinks}>Grape Juice</a>
+          <a href="#peach_nectar" id="i=peach_nectar"  onClick={filterDrinks}>Peach Nectar</a>
+          <a href="#lemon" id="i=lemon"  onClick={filterDrinks}>Lemon</a>
+          <a href="#firewater" id="i=firewater"  onClick={filterDrinks}>Firewater</a>
+          <a href="#lemonade" id="i=lemonade"  onClick={filterDrinks}>Lemonade</a>
+          <a href="#lager" id="i=lager"  onClick={filterDrinks}>Lager</a>
+          <a href="#whiskey" id="i=whiskey"  onClick={filterDrinks}>Whiskey</a>
+          <a href="#absolut_citron" id="i=absolut_citron"  onClick={filterDrinks}>Absolut Citron</a>
+          <a href="#pisco" id="i=pisco"  onClick={filterDrinks}>Pisco</a>
+          <a href="#irish_cream" id="i=irish_cream"  onClick={filterDrinks}>Irish Cream</a>
+          <a href="#ale" id="i=ale"  onClick={filterDrinks}>Ale</a>
+          <a href="#chocolate_liqueur" id="i=chocolate_liqueur"  onClick={filterDrinks}>Chocolate Liqueur</a>
+          <a href="#midori_melon_liqueur" id="i=midori_melon_liqueur"  onClick={filterDrinks}>Midori Melon Liqueur</a>
+          <a href="#sambuca" id="i=sambuca"  onClick={filterDrinks}>Sambuca</a>
+          <a href="#cider" id="i=cider"  onClick={filterDrinks}>Cider</a>
+          <a href="#sprite" id="i=sprite"  onClick={filterDrinks}>Sprite</a>
+          <a href="#7-Up" id="i=7-Up"  onClick={filterDrinks}>7-Up</a>
+          <a href="#blackberry_brandy" id="i=blackberry_brandy"  onClick={filterDrinks}>Blackberry Brandy</a>
+          <a href="#peppermint_schnapps" id="i=peppermint_schnapps"  onClick={filterDrinks}>Peppermint Schnapps</a>
+          <a href="#creme_de_cassis" id="i=creme_de_cassis"  onClick={filterDrinks}>Creme de Cassis</a>
           
         </div>
       </div>
@@ -229,9 +230,9 @@ function Complete_Drink_List(){
       <div class="dropdown">
         <button class="dropbtn">Alcohol Content</button>
         <div class="dropdown-content">
-          <a href="#145" id="a=alcoholic" onClick={filterDrinks}>Alcoholic</a>
-          <a href="#146" id="a=non_alcoholic"  onClick={filterDrinks}>Non Alcoholic</a>
-          <a href="#147" id="a=optional_alcohol"  onClick={filterDrinks}>Optional Alcohol</a>
+          <a href="#alcoholic" id="a=alcoholic" onClick={filterDrinks}>Alcoholic</a>
+          <a href="#non_alcoholic" id="a=non_alcoholic"  onClick={filterDrinks}>Non Alcoholic</a>
+          <a href="#optional_alcohol" id="a=optional_alcohol"  onClick={filterDrinks}>Optional Alcohol</a>
         </div>
       </div>
 
