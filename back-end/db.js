@@ -12,9 +12,8 @@ const UserSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
-    email: {
+    name: {
         type: String,
-        unique: true,
         required: true
     },
     password: {
@@ -30,4 +29,4 @@ const UserSchema = new mongoose.Schema({
 mongoose.model('Favorite', FavoritesSchema);
 mongoose.model('User', UserSchema);
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.d6uyu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`);
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.d6uyu.mongodb.net/bottomsup?retryWrites=true&w=majority`);
