@@ -7,6 +7,45 @@ import axios from 'axios';
 
 function Cocktail_List(){
   const [cocktailItems, setCocktails] = useState([]);
+  const[DrinksArray, setDrinks] = useState([]);
+
+  function filterIngredients(rawData){
+    console.log(rawData.length);
+    for (var i = 0; i < rawData.length; i++) {
+      console.log(rawData[i]);
+    }
+    [...rawData].map((data)=>{
+      //rawData.map((data)=>{
+      let ingredients =[]
+      for (const[key,value] of Object.entries(data)){
+        if(key.includes("strIngredient") &&value!== ""&& value!==null){
+          ingredients.push(value)
+        }
+      }
+      data["ingredients"]= ingredients;
+      console.log(data);
+    })
+    console.log(rawData)
+  }
+
+  function getIngredients(rawData) {
+    let drinks = []
+    rawData.forEach((drink) => {
+    axios(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink.idDrink}`)
+    .then((data) => {
+    // console.log(data)
+    drinks.push(data.data.drinks[0])
+    setDrinks([...DrinksArray, data.data.drinks[0]])
+        }).catch(err => console.log(err))
+    })
+    //I tried to do it with the use state but when i do this it only returns one object
+    //filterIngredients(DrinksArray);
+    //console.log(DrinksArray)
+
+    filterIngredients(drinks)
+    console.log(drinks)
+    
+}
 
   useEffect(() => {
 
@@ -18,6 +57,7 @@ function Cocktail_List(){
 
     axios(`https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${storage.join(",")}`)
       .then( (response) => {
+        getIngredients(response.data.drinks);
         setCocktails(response.data.drinks);
       })
       .catch( (err) => {
