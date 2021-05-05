@@ -6,6 +6,7 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 function Drink_Recipe(props){
     const [drinkInfo, setDrinkInfo] = useState({});
+    let drinks = props.location.state;
     useEffect(()=> {
         setDrinkInfo(props.location.state)
         }
@@ -43,10 +44,15 @@ function Drink_Recipe(props){
 
             <div className="recContainer">
                 <p id = "Drink-Rec">
-                    <h4>Glass Recommended:</h4> {drinkInfo.glass}
-                    <h4>Description/Instructions:</h4> {drinkInfo.instructions}
-                    <h4>Ingredients:</h4> {drinkInfo.ingredientsMeasure}
-                    <h4>Ingredients:</h4>
+                    <h4 className="space">Glass Recommended:</h4> {drinks.glass}
+                    <h4 className="space">Description/Instructions:</h4> {drinks.instructions}
+                    <h4 className="space">Ingredients:</h4> {drinks.ingredients.map( (ingredient) => {
+                        return(
+                            <li>{ingredient}</li>
+                        )
+                    })}
+                    {/* <h4>Measurements:</h4> {drinkInfo.ingredientsMeasure} */}
+                    {/* <h4>Ingredients:</h4> */}
                     {/* <div>
                     <ul>
                         {
@@ -63,11 +69,11 @@ function Drink_Recipe(props){
                 </p>
             </div>
             
-            <div className = "Button-Group">
+            {/* <div className = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
                 <button onClick={saveRec}>Save Recipe</button>
                 <button onClick={dispRatings}>Ratings</button>
-            </div>
+            </div> */}
             
         </main>
         <footer>
