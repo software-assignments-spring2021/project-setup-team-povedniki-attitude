@@ -104,6 +104,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/searchpage', cors(), (req, res) => { 
+    res.set('Access-Control-Allow-Origin', '*');
     let drink = req.query.search;
     axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
     //axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=martini`)
