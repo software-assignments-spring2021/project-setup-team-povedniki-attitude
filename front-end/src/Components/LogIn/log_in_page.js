@@ -40,9 +40,7 @@ function LogIn(){
                     <div class="field-label">Password</div>
                     <input class="sign-in-field" id="pwdField" type="password" name = "password" onChange={e => setPassword(e.target.value)}></input>
                 </div>
-                <div className="sign-in-button mini">Sign In
-                <input class= "sign-in-footer" type ="submit"></input>
-                </div>
+                <input class= "sign-in-button mini" type ="submit"></input>
                 <div class="sign-in-footer">Don't have an account? <a href="./register">Register here</a></div>
                 </form>
             </div>

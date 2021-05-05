@@ -118,6 +118,7 @@ app.get('/searchpage', cors(), (req, res) => {
 });
 
 app.get('/signin', cors(), (req, res) => {
+  console.log('hello')
   console.log(req.user);
     if (req.user) {
       console.log(req.user);

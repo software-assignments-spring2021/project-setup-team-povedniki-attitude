@@ -79,8 +79,7 @@ function Complete_Drink_List(){
     //filter by drink type
       axios('https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?' + api_link)
       .then( (response) => {
-        filterIngredients(response.data.drinks)
-        setCocktails(response.data.drinks);
+        getIngredients(response.data.drinks);
       })
       .catch( (err) => {
         console.log(err);
@@ -279,17 +278,19 @@ function Complete_Drink_List(){
           {
             cocktailItems !== null?
             cocktailItems.map((item, index)=> {
-             return(
-               <>
-               <Cocktail_Item key ={index} 
-               name={item.strDrink}
-               image= {item.strDrinkThumb}
-               instructions = {item.strInstructions}
-               ingredients={item.ingredients}
-               ingredientsMeasure={item.ingredientsMeasure}
-               glass= {item.strGlass}/>
-               </>
-             ) 
+              if (index !== cocktailItems.length-1) {
+                return(
+                  <>
+                  <Cocktail_Item key ={index} 
+                  name={item.strDrink}
+                  image= {item.strDrinkThumb}
+                  instructions = {item.strInstructions}
+                  ingredients={item.ingredients}
+                  ingredientsMeasure={item.ingredientsMeasure}
+                  glass= {item.strGlass}/>
+                  </>
+                )
+              } 
             })
             : <div id = "noResults">No results found!</div>
 
