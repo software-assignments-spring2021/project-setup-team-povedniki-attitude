@@ -118,6 +118,7 @@ app.get('/searchpage', cors(), (req, res) => {
 });
 
 app.get('/signin', cors(), (req, res) => {
+  console.log('hello')
   console.log(req.user);
     if (req.user) {
       console.log(req.user);
@@ -137,11 +138,11 @@ app.post('/login',
 
 app.post("/register", cors(), (req, res) => {
   auth.register(req.body.email, req.body.name, req.body.password, (message) => {
-    // error callback
-    res.redirect('http://localhost:3001/register');
+    // success callback
+    res.redirect('http://localhost:3001/login');
   }, () => {
-      // success callback
-      res.redirect('http://localhost:3001/login');
+      // error callback
+      res.redirect('http://localhost:3001/register');
   });
 })
 

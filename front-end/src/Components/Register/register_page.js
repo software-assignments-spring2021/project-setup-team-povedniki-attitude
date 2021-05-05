@@ -37,7 +37,7 @@ function Register(){
         </div>
         <main>
             <div className="sign-in-container">
-              <form onSubmit={handleSubmit}>
+              <form method="POST" action="http://localhost:3000/register">
                 <div class="field-container">
                   <div class="field-label">Name</div>
                   <input class="sign-in-field" type="text" name="name" onChange={e => setName(e.target.value)}/>
@@ -54,11 +54,7 @@ function Register(){
                     <div class="field-label">Confirm Password</div>
                     <input class="sign-in-field" id="pwdConfirmField" type="password"></input>
                 </div>
-
-                <div className="sign-in-button mini">
-                  Create Account
-                  <input class= "sign-in-footer" type ="submit"></input>
-                  </div>
+                  <input class= "sign-in-button mini" type ="submit"></input>
                 <div class="sign-in-footer">Already have an account? <a href="./login">Sign in here</a></div>
               </form>
             </div>
