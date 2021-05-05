@@ -37,7 +37,7 @@ function Register(){
         </div>
         <main>
             <div className="sign-in-container">
-              <form method="POST" action="http://localhost:3000/register">
+              <form method="POST" action="http://174.138.46.165:3000/register">
                 <div class="field-container">
                   <div class="field-label">Name</div>
                   <input class="sign-in-field" type="text" name="name" onChange={e => setName(e.target.value)}/>
