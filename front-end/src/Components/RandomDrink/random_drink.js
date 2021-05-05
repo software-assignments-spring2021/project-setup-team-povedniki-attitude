@@ -43,7 +43,7 @@ function Random_Drink(props){
     
     
       function filterIngredientsMeasure(rawData){
-        rawData.map((data)=>{
+        rawData.forEach((data)=>{
           let ingredients =[]
           for (const[key,value] of Object.entries(data)){
             if(key.includes("strIngredient") &&value!== ""&& value!==null){
@@ -67,17 +67,27 @@ function Random_Drink(props){
         })
       }
 
-      async function fetchData() {
-        let data = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
-          //filterIngredients(response.data.drinks)
-          filterIngredientsMeasure(data.data.drinks)
-          setDrinkInfo(data.data.drinks);
+      // async function fetchData() {
+      //   let data = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
+      //     //filterIngredients(response.data.drinks)
+      //     filterIngredientsMeasure(data.data.drinks)
+      //     setDrinkInfo(data.data.drinks);
           
-          console.log(data.data)
-        }
+      //     console.log(data.data)
+      //   }
       
     
       useEffect(() => {
+        async function fetchData() {
+          let data = await axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
+            //filterIngredients(response.data.drinks)
+            filterIngredientsMeasure(data.data.drinks)
+            setDrinkInfo(data.data.drinks);
+            
+            console.log(data.data)
+          }
+
+
         // axios.get('https://www.thecocktaildb.com/api/json/v2/9973533/random.php')
         //   .then( (response) => {
         //     //filterIngredients(response.data.drinks)
@@ -95,12 +105,12 @@ function Random_Drink(props){
         <>
         <HamburgerMenu></HamburgerMenu>
         <header className="App-header">
-        <img id='logo' src='logo.png'></img>
+        <img id='logo' src='logo.png' alt=""></img>
         </header>
         
         <main>
             <div className = "drinkInfo">
-                <img id = "Drink-Image" src={drinkInfo[0]?.strDrinkThumb}/>
+                <img id = "Drink-Image" src={drinkInfo[0]?.strDrinkThumb} alt=""/>
                 <h2 id = "Drink-Name">{drinkInfo[0]?.strDrink}</h2>
             </div>
 
