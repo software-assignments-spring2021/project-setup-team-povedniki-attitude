@@ -13,7 +13,7 @@ services:
   - mongodb
   
 script:
-  - test
+  - npm run test
 
 deploy:
   provider: script

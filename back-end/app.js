@@ -130,19 +130,19 @@ app.get('/signin', cors(), (req, res) => {
 });
 
 app.post('/login', 
-    passport.authenticate('local', { successRedirect: 'http://localhost:3001',
-                                    failureRedirect: "http://localhost:3001/login",
+    passport.authenticate('local', { successRedirect: "http://174.138.46.165:3000",
+                                    failureRedirect: "http://174.138.46.165:3000/login",
                                     })            
 );
 
 
 app.post("/register", cors(), (req, res) => {
   auth.register(req.body.email, req.body.name, req.body.password, (message) => {
-    // success callback
-    res.redirect('http://localhost:3001/login');
+    // error callback
+    res.redirect('http://174.138.46.165:3000/register');
   }, () => {
-      // error callback
-      res.redirect('http://localhost:3001/register');
+      // success callback
+      res.redirect('http://174.138.46.165:3000/login');
   });
 })
 
