@@ -58,7 +58,9 @@ function AboutUs(){
                   <span class="card-title" text = "black">Charles Condon</span>
                 </div>
                 <div class="card-content">
-                  <h4 class="spacing">Diego Mendoza did this.</h4>
+                  <h4 class="spacing">He is a senior at NYU CAS majoring in Computer Science with a concentration on Web Development.
+                                      For this project he was in charge of the Home page, css styling, the database, express routing, and the hamburger menu.</h4>
+                  <h4>Favorite Drink: Rum and Coke</h4>
                 </div>
               </div>
             </div>
@@ -69,7 +71,8 @@ function AboutUs(){
                   <span class="card-title ">Humza Khan</span>
                 </div>
                 <div class="card-content">
-                  <h4 class="spacing">Diego Mendoza did this.</h4>
+                  <h4 class="spacing">Diego Mendoza did this.</h4><br></br><br></br><br></br><br></br>
+                  <h4>Favorite Drink: </h4>
                 </div>
               </div>
             </div>
