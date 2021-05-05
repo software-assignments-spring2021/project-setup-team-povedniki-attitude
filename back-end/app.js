@@ -38,6 +38,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use( express.static( `${__dirname}/../build` ) );
+
 const User = mongoose.model('User');
 
 // register (have to add route still)
@@ -155,7 +157,9 @@ app.post("/register", cors(), (req, res) => {
 })
 
 
+const path = require('path');
 
+app.get('*', (req, res)=>{  res.sendFile(path.join(__dirname, '../build/index.html'));});
 
 module.exports = app
 
