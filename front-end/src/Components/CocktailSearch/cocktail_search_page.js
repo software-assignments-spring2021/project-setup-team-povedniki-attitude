@@ -69,7 +69,7 @@ function Cocktail_Search_Page(){
     setTitle("");
     
     let inputDrink = e.currentTarget.previousElementSibling.value;
-    axios.get(`http://174.138.46.165:3000/searchpage?search=${inputDrink}`)
+    axios.get(`http://174.138.46.165/searchpage?search=${inputDrink}`)
     .then(function (response) {
       //in here put response.data.drinks into the coctailItmes list
       
