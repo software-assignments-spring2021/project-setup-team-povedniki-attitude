@@ -8,16 +8,12 @@ script: "true"
 install:
   - cd back-end/
   - npm install
-  - npm run 
-  - cd ../front-end
-  - npm install
-  - npm run
 
 services:
   - mongodb
   
 script:
-  - unit-tests
+  - npm run test
 
 deploy:
   provider: script

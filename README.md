@@ -1,5 +1,7 @@
 # BottomsUp
 
+[![Build Status](https://travis-ci.com/mannyk017/project-setup-team-povedniki-attitude.svg?branch=master)](https://travis-ci.com/mannyk017/project-setup-team-povedniki-attitude)
+
 ## Vision Statement
 For the adult, who enjoys mixology and convenience, BottomsUp is a one-stop cocktail web app that brings the user a wide variety of drink recipes based off ingredients they already own.
 
