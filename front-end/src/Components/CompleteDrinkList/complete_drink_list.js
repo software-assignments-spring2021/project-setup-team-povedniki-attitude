@@ -7,9 +7,16 @@ import axios from 'axios';
 
 function Complete_Drink_List(){
   const [cocktailItems, setCocktails] = useState([]);
+  const[DrinksArray, setDrinks] = useState([]);
+  let drinksArr = [];
 
   function filterIngredients(rawData){
-    rawData.map((data)=>{
+    //console.log(rawData.length);
+    for (var i = 0; i < rawData.length; i++) {
+      //console.log(rawData[i]);
+    }
+    [...rawData].map((data)=>{
+      //rawData.map((data)=>{
       let ingredients =[]
       for (const[key,value] of Object.entries(data)){
         if(key.includes("strIngredient") &&value!== ""&& value!==null){
@@ -17,15 +24,43 @@ function Complete_Drink_List(){
         }
       }
       data["ingredients"]= ingredients;
+      //console.log(data);
     })
+    //console.log(rawData)
+  }
+
+  function getIngredients(rawData) {
+    let drinks = []
+    //console.log(rawData);
+    rawData.forEach((drink) => {
+    axios(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink.idDrink}`)
+    .then( function(data) {
+        //console.log(data.data.drinks[0]);
+        drinks.push(data.data.drinks[0])
+        setDrinks([...DrinksArray, data.data.drinks[0]])
+        drinksArr = [...drinksArr, data.data.drinks[0]];
+        
+    })
+    .then( function(data) {
+      filterIngredients(drinks);
+      setCocktails(drinks);
+    })
+    .catch(err => console.log(err))
+    })
+    //I tried to do it with the use state but when i do this it only returns one object
+    //filterIngredients(DrinksArray);
+    //console.log(DrinksArray)
+
+    //filterIngredients(drinks)
+    //console.log(drinks)
+    
   }
 
 
   useEffect(() => {
     axios('https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=')
       .then( (response) => {
-        filterIngredients(response.data.drinks)
-        setCocktails(response.data.drinks);
+        getIngredients(response.data.drinks);
       })
       .catch( (err) => {
         console.log(err);
@@ -50,7 +85,7 @@ function Complete_Drink_List(){
       .catch( (err) => {
         console.log(err);
       })
-      console.log(click_id.target.id);
+      //console.log(click_id.target.id);
   }
 
 
@@ -249,7 +284,10 @@ function Complete_Drink_List(){
                <Cocktail_Item key ={index} 
                name={item.strDrink}
                image= {item.strDrinkThumb}
-               ingredients={item.ingredients}/>
+               instructions = {item.strInstructions}
+               ingredients={item.ingredients}
+               ingredientsMeasure={item.ingredientsMeasure}
+               glass= {item.strGlass}/>
                </>
              ) 
             })
