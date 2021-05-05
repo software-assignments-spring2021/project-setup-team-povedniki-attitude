@@ -16,10 +16,6 @@
     padding-top: 10px;
 }
 
-.matchScore{
-
-}
-
 .content{
     display: flex;
     padding: 10px;
@@ -44,7 +40,7 @@
 #SearchContainer{
     
     margin: auto;
-    width: 50%;
+    
     
 
 }
@@ -53,4 +49,9 @@
 }
 main{
     width: 100%;
+}
+
+#logo {
+    width: 25%;
+    height: 25%;
 }

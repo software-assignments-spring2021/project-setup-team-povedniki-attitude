@@ -1,3 +1,11 @@
+#Suggestion{
+    color:black;
+    padding-top: 25px;
+    font-style: italic;
+    text-align: left;
+    padding-left: 30px;
+    
+}
 
 .Cocktail_Item{
     /* border-style: solid; */
@@ -5,6 +13,7 @@
     width: 800px;
     margin: 10px;
     background-color: white;
+    /* background-color: #E8EBF7!important; */
     
     
 }
@@ -15,36 +24,64 @@
 }
 .name{
     padding: 10px;
+    padding-bottom: 0px;
+    color: black;
 }
 .content{
     display: flex;
     padding: 10px;
     /* justify-content: space-around; */
     font-style: italic;
-    
+    color: black;
 }
 
 .content img{
     max-width: 175px;
-    max-height: 175cpx;
+    max-height: 175px;
     /* position: relative;
     right: 70px; */
     
 }
-.content .description{
-    padding-left: 20px;
+.ingredientsContainer{
+    margin-left: 20px;
 }
+h4{
+    margin-bottom: 0px;
+    margin-top: 3px;
+}
+.content .ingredients{
+    padding-left: none;
+    
+}
+ul {
+    text-align: left;
+    margin-top: auto;
+    padding-top: 5px;
+    
+ }
+
+ li.ingredients{
+     padding-left: 3px;
+     padding-top: 0px;
+ }
 
 #SearchContainer{
-    
+    display: inline-block;
     margin: auto;
-    width: 50%;
-    
-
+    min-height: 500px;
 }
 #SearchContainer a{
     text-decoration: none;
 }
 main{
     width: 100%;
+}
+
+#logo {
+    width: 25%;
+    height: 25%;
+}
+
+#noResult {
+    height: 700px;
 }

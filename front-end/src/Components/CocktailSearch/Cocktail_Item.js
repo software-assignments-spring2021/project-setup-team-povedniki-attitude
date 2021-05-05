@@ -3,14 +3,17 @@ import {Link} from 'react-router-dom'
 
 
 
-function Cocktail_Item({name,image,description}){
+function Cocktail_Item({name,image,ingredients,instructions, ingredientsMeasure, glass}){
     return(
         <Link to={{
             pathname: "/drinkrecipe",
             state: {
                 name,
                 image,
-                description,
+                ingredients,
+                instructions,
+                ingredientsMeasure,
+                glass
                 }
             }}>
         <div className="Cocktail_Item">
@@ -18,11 +21,22 @@ function Cocktail_Item({name,image,description}){
            {/* </div><div className="Name"> {name}</div> */}
 
            <div className="content">
-           <img src ={image}/>
+           <img src ={image} alt={''}/>
            
-           <div className="description">Description: {description}</div>
+           {/* <div className="ingredients">{ingredients}</div> */}
+           <div className= "ingredientsContainer">
+           <h4>Ingredients needed:</h4>
+           <ul>
+             {
+                ingredients.map((ingredient) => {
+                return (
+                      <li className= "ingredients">{ingredient}</li>
+                    )
+                })
+             } 
+             </ul>
            
-
+            </div>
             </div>  
         </div>  
         </Link>

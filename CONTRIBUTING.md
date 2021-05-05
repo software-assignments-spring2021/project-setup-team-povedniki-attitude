@@ -31,3 +31,21 @@ Clone repository through your command line using:<br>
 Then open repository into your IDE of choice to begin contributions.
 
 ## Building and Testing
+For set up, you must first write the following command in the command line:
+```
+git clone https://github.com/agile-dev-assignments/project-setup-team-povedniki-attitude.git
+```
+
+In order to install all the dependencies for the back end write:
+```
+cd back-end
+npm install
+npm start
+```
+Following this you must open up another command line window and perform:
+```
+cd front-end
+npm install
+npm start
+```
+The command will then prompt you to run the app on another port because the back end will be running on port 3000, you must respond yes to this. After this the front end will load in your local browser. 

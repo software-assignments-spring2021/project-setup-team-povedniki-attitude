@@ -1,42 +1,19 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  position: relative;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1e2c3e!important;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 5rem;
 }
+
 .App-header h1 {
   margin: .2em 0;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 main {
@@ -54,12 +31,12 @@ main {
 
 #ingContainer {
   position: relative;
-  width: 80%;
+  width: 50%;
   min-height: 18em;
   height: auto;
   background-color: white;
   margin: 3em auto;
-  border: 2px solid white;
+  
   border-radius: 10px;
   box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
   overflow: hidden;
@@ -71,19 +48,62 @@ main {
   display: block;
   margin: 10px;
   padding: 1em;
-  border: 2px solid black;
   border-radius: 10px;
   font-size: 1.5em;
+  color: white;
+  background-color: #1e2c3e;
+}
+
+/* .inputIng:hover {
+  background-color: rgba(0,0,0,0.25);
+} */
+
+#ingredientSubmit {
+  border: 2px solid white;
+  /* border-radius: 10px; */
+  background-color: white;
+  min-width: 75px;
+  max-height: 30px;
+  border-radius: 4px;
+  
 }
 
 #recipeSearch {
   border: 2px solid white;
+  border-radius: 10px;
   padding: 5px;
   background-color: white;
-  border-radius: 5px;
   text-decoration: none;
   color: black;
   box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
+  width: 20%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+#randomSearch {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
+  width: 20%;
+  margin: 1rem auto;
+}
+
+#surpriseMe {
+  display: block;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.25);
+  width: 7%;
+  margin: 3rem auto;
 }
 
 input {
@@ -91,18 +111,55 @@ input {
 }
 
 footer {
-  background-color: #282c34;
+  background-color: #1e2c3e!important;
   align-items: center;
   justify-content: center;
   font-size: calc(3px + 2vmin);
-  color: white;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+footer p {
+  color: #ff837e;
 }
 
 #pageContainer {
   position: relative;
   min-height: 100vh;
 }
+
+#logo {
+  width: 25%;
+  height: 25%;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  width: 10px;
+  height: 10px;
+}
+
+.hide {
+  opacity: .5;
+}
+
+#searchAndSubmit{
+  max-width: 650px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:auto;
   
+}
+
+
+/* #combo-box{
+  margin:auto;
+} */

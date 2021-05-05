@@ -2,19 +2,22 @@
 import './sign_in_page.css';
 import React, { useState } from 'react';
 //import ReactDOM from 'react-dom';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+
 
 function SignIn(){
 
   return(
     <>
       <div id='pageContainer'>
+        <HamburgerMenu></HamburgerMenu>
         <div className="App-header">
-        <h1>BottomsUp</h1>
+        <img id='logo' src='logo.png'></img>
         </div>
         <main>
             <div className="sign-in-container">
-                <div className="sign-in-button">Sign In</div>
-                <div className="sign-in-button">Register</div>
+                <a href="./login"><div className="sign-in-button">Sign In</div></a>
+                <a href="./register"><div className="sign-in-button">Register</div></a>
                 <a href=".."><div className="sign-in-button" id="guest">Search as Guest</div></a>
             </div>
         </main>

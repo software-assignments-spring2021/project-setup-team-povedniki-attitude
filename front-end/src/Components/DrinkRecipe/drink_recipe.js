@@ -1,13 +1,15 @@
 import './drink_recipe.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {useEffect, useState} from 'react'
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
+
 
 function Drink_Recipe(props){
     const [drinkInfo, setDrinkInfo] = useState({});
+    let drinks = props.location.state;
     useEffect(()=> {
-            setDrinkInfo(props.location.state)
-            }
+        setDrinkInfo(props.location.state)
+        }
     )
 
     const drinkName = "Moscow Mule"
@@ -28,10 +30,11 @@ function Drink_Recipe(props){
 
     return(
         <>
-            <header className="App-header">
-            <h1>BottomsUp</h1>
-            </header>
-
+        <HamburgerMenu></HamburgerMenu>
+        <header className="App-header">
+        <img id='logo' src='logo.png'></img>
+        </header>
+        
         <main>
 
             <div className = "drinkInfo">
@@ -40,17 +43,42 @@ function Drink_Recipe(props){
             </div>
 
             <div className="recContainer">
-                <p id = "Drink-Rec">Description: {drinkInfo.description}</p>
+                <p id = "Drink-Rec">
+                    <h4 className="space">Glass Recommended:</h4> {drinks.glass}
+                    <h4 className="space">Description/Instructions:</h4> {drinks.instructions}
+                    <h4 className="space">Ingredients:</h4> {drinks.ingredients.map( (ingredient) => {
+                        return(
+                            <li>{ingredient}</li>
+                        )
+                    })}
+                    {/* <h4>Measurements:</h4> {drinkInfo.ingredientsMeasure} */}
+                    {/* <h4>Ingredients:</h4> */}
+                    {/* <div>
+                    <ul>
+                        {
+                            drinkInfo?.ingredientsMeasure.map((item) => {
+                                return(
+                                    <li>{item}</li>
+                                )
+                            })
+                        }
+                    </ul>
+                    </div> */}
+                     
+                    
+                </p>
             </div>
             
-            <div className = "Button-Group">
+            {/* <div className = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
                 <button onClick={saveRec}>Save Recipe</button>
                 <button onClick={dispRatings}>Ratings</button>
-            </div>
+            </div> */}
             
         </main>
-
+        <footer>
+          <p>Copyright © 2021 BottomsUp</p>
+        </footer>
         </>
         )
     
