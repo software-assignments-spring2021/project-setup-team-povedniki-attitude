@@ -17,17 +17,17 @@ function Random_Drink(props){
     //const imageName = "https://www.liquor.com/thmb/hY8vXSQUQNgWxLN1c-3BntZo5fM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__03__07152853__moscow-mule-720x720-recipe-61ce552013b04880901b2abfb63017fd.jpg"
     
 
-    function dispNutrition(){
-        alert('NUTRITION FACTS')
-    }
+    // function dispNutrition(){
+    //     alert('NUTRITION FACTS')
+    // }
 
-    function saveRec(){
-        alert('Recipe Saved!')
-    }
+    // function saveRec(){
+    //     alert('Recipe Saved!')
+    // }
 
-    function dispRatings(){
-        alert('View Drink Ratings')
-    }
+    // function dispRatings(){
+    //     alert('View Drink Ratings')
+    // }
 
     // function filterIngredients(rawData){
     //     rawData.map((data)=>{
@@ -135,11 +135,11 @@ function Random_Drink(props){
                 </p>
             </div>
             
-            <div className = "Button-Group">
+            {/* <div className = "Button-Group">
                 <button onClick={dispNutrition}>Nutrition Facts</button>
                 <button onClick={saveRec}>Save Recipe</button>
                 <button onClick={dispRatings}>Ratings</button>
-            </div>
+            </div> */}
             
         </main>
         <footer>
