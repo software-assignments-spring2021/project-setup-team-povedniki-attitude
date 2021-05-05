@@ -117,16 +117,16 @@ app.get('/searchpage', cors(), (req, res) => {
         });    
 });
 
-app.get('/signin', cors(), (req, res) => {
-  console.log(req.user);
-    if (req.user) {
-      console.log(req.user);
-        res.redirect('/accountdetails');
-    }
-    else {
-        res.status(200).json();
-    }
-});
+// app.get('/signin', cors(), (req, res) => {
+//   console.log(req.user);
+//     if (req.user) {
+//       console.log(req.user);
+//         res.redirect('/accountdetails');
+//     }
+//     else {
+//         res.status(200).json();
+//     }
+// });
 
 app.post('/login', 
     passport.authenticate('local', { successRedirect: 'http://localhost:3001',
