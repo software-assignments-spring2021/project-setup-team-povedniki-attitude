@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "node"
+  - "12"
+sudo: required
+script: "true"
+
+install:
+  - cd back-end/
+  - npm install
+
+services:
+  - mongodb
+  
+script:
+  - test
+
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  on:
+    branch: master
