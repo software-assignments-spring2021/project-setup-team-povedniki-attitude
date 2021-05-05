@@ -31,6 +31,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors())
 
+app.use((req, res, next) => {
+  res.append('Access-Control-Allow-Origin', ['*']);
+  res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.append('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 const User = mongoose.model('User');
 
 // register (have to add route still)
@@ -104,7 +111,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/searchpage', cors(), (req, res) => { 
-    res.set('Access-Control-Allow-Origin', '*');
+    // res.set('Access-Control-Allow-Origin', '*');
     let drink = req.query.search;
     axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=${drink}`)
     //axios.get(`https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=martini`)
