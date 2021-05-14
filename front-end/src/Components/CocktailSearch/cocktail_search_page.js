@@ -92,15 +92,15 @@ function Cocktail_Search_Page(){
       </header>
       <main>
         <form>
-          <input type='text' id="ingredientInput" name='ingredient' placeholder='Search For Cocktail'/> 
-          <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/>
-          {/* {< TextField  label="Search for Cocktails" variant="outlined" name='ingredient' style={{ width: 500 }}/> }
+          {/* <input type='text' id="ingredientInput" name='ingredient' placeholder='Search For Cocktail'/> 
+          <input type='submit' id="ingredientSubmit" onClick={onSubmit} name='ingSubmit' value='Submit'/> */}
+          {< TextField  label="Search for Cocktails" variant="outlined" name='ingredient' style={{ width: 500 }}/> }
           <Button 
               variant="outlined" 
               type="submit"
               onClick={onSubmit}
               name="ingSubmit"
-              >submit</Button> */}
+              >submit</Button>
         </form>
         <div id="SearchContainer">
           <div id = "Suggestion"> {title} </div>

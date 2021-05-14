@@ -90,8 +90,8 @@ function AboutUs(){
                 <div class="card-content">
                   <span class="card-title">Maria Hatzioanidis</span>
                   <hr></hr>
-                  <h4 class="spacing">Diego Mendoza did this.</h4>
-                  <h4 class="spacing">Favorite Drink: </h4>
+                  <h4 class="spacing">Maria is a senior at Gallatin concentrating in architecture and furniture design and minoring in computer science. She has been working on the drink search page and implementing the search components through the back end. </h4>
+                  <h4 class="spacing">Favorite Drink: Dark 'n' Stormy</h4>
                 </div>
               </div>
             </div>
